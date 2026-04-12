@@ -48,3 +48,5 @@ curl -fsSL https://raw.githubusercontent.com/FutureX-Skills/futurex-skills/main/
 ## 如何推荐
 
 如有想收录的 external skill，欢迎告知！
+
+| qiaomu-markdown-proxy | joeseesun/qiaomu-markdown-proxy | URL转Markdown，支持微信公众号/飞书/Twitter等 |
