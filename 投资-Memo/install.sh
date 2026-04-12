@@ -1,6 +1,6 @@
 #!/bin/bash
 REPO="FutureX-Skills/futurex-skills"
-SKILL="投资备忘录"
+SKILL="投资-Memo"
 TARGET="$HOME/.agents/skills/$SKILL"
 mkdir -p "$TARGET"
 curl -fsSL "https://raw.githubusercontent.com/$REPO/main/$SKILL/SKILL.md" -o "$TARGET/SKILL.md"
