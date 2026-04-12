@@ -8,9 +8,50 @@
 
 **FutureX Capital（天际资本）** 是一家专注于 AI 领域的早期投资机构，重点关注 AI Agent、AI 应用、AI 硬件及下一代智能基础设施。我们不仅提供资金支持，更通过内容传播、资源链接与社区构建，帮助创业者加速成长。
 
-> 🌐 **开源与共享** — 我们坚信：工具开源、知识共享，才能推动整个 VC/PE 行业进入智能化时代。**FutureX Skills** 知识库完全开源，供创业者和行业同行免费使用。
+> 🌐 **开源与共享** — 我们坚信：工具开源，知识共享，才能推动整个 VC/PE 行业进入智能化时代。**FutureX Skills** 知识库完全开源，供创业者和行业同行免费使用。
 
 天际团队会**不定期更新**新的 Skills，同时也会主动发掘和评测来自社区的优质 Skills，将其收入 **外部精选Skills** 库中推荐给大家。欢迎 Star 关注，持续跟踪最新工具。
+
+---
+
+## 🚀 如何安装
+
+### 安装单个 Skill
+
+每个 Skill 目录下都有独立的 `README.md`，其中包含该 Skill 的详细介绍和**一键安装命令**。
+
+找到你想安装的 Skill → 进入其目录 → 复制 `README.md` 中的安装指令即可。
+
+### 快速导航
+
+| 需求场景 | 推荐 Skills |
+|---------|------------|
+| 生成投研报告、尽调报告 | `研报助手`、`硅谷季度报告`、`立项报告`、`PIB投研搜索` |
+| 社交媒体内容创作 | `社媒营销`、`视频标题大师`、`LinkedIn内容助手`、`AI-VC推文助手` |
+| 播客/内容生产 | `播客后期助手`、`公众号排版助手`、`AI内容写作助手` |
+| 投资业务提效 | `投资-Memo`、`VC创始人会面准备`、`会议纪要整理助手`、`PE募资追踪器` |
+| 运营与合规 | `费用报销合规检查`、`事项提醒`、`云Token监控`、`TODO任务追踪` |
+| 外部精选工具 | `qiaomu-markdown-proxy`、`李继刚skills/` |
+
+---
+
+## ⭐ CEO 开源项目：GPilot-Simon
+
+> **特别推荐** — 天际资本 CEO Simon 的心血之作
+
+**GPilot-Simon** 是 Simon 独立开发的多智能体投资管理系统，也是本知识库的技术底座之一。
+
+它是一个面向 VC/PE 投资人的 AI 原生工作流框架，包含：
+
+- 🤖 **8个专用 Agent** — Deal Sourcer、Deep Researcher、Financial Analyst、Memo Writer …
+- 📋 **19个投研命令** — IC Memo、Deal Screen、Research、Board Prep …
+- 🗓️ **9个定时任务** — Morning Briefing、Portfolio News、Weekly Pipeline …
+- 💼 **募资运营模块** — Fund Accounting、LP Reporting、Capital Call …
+- 📊 **Next.js 管理面板** — Portfolio 全景可视化管理
+
+👉 **项目地址：[ruiyang-xu/GPilot](https://github.com/ruiyang-xu/GPilot)**
+
+如果你觉得 GPilot 有用，欢迎给个 Star ⭐
 
 ---
 
@@ -64,47 +105,6 @@ futurex-skills/
     ├── TODO任务追踪             # 持久化 TODO.md 任务清单
     └── AI-VC推文助手            # VC 风格 Twitter/X 帖子生成
 ```
-
----
-
-## 🚀 如何安装
-
-### 安装单个 Skill
-
-每个 Skill 目录下都有独立的 `README.md`，其中包含该 Skill 的详细介绍和**一键安装命令**。
-
-找到你想安装的 Skill → 进入其目录 → 复制 `README.md` 中的安装指令即可。
-
-### 快速导航
-
-| 需求场景 | 推荐 Skills |
-|---------|------------|
-| 生成投研报告、尽调报告 | `研报助手`、`硅谷季度报告`、`立项报告`、`PIB投研搜索` |
-| 社交媒体内容创作 | `社媒营销`、`视频标题大师`、`LinkedIn内容助手`、`AI-VC推文助手` |
-| 播客/内容生产 | `播客后期助手`、`公众号排版助手`、`AI内容写作助手` |
-| 投资业务提效 | `投资-Memo`、`VC创始人会面准备`、`会议纪要整理助手`、`PE募资追踪器` |
-| 运营与合规 | `费用报销合规检查`、`事项提醒`、`云Token监控`、`TODO任务追踪` |
-| 外部精选工具 | `qiaomu-markdown-proxy`、`李继刚skills/` |
-
----
-
-## ⭐ CEO 开源项目：GPilot-Simon
-
-> **特别推荐** — 天际资本 CEO Simon 的心血之作
-
-**GPilot-Simon** 是 Simon 独立开发的多智能体投资管理系统，也是本知识库的技术底座之一。
-
-它是一个面向 VC/PE 投资人的 AI 原生工作流框架，包含：
-
-- 🤖 **8个专用 Agent** — Deal Sourcer、Deep Researcher、Financial Analyst、Memo Writer …
-- 📋 **19个投研命令** — IC Memo、Deal Screen、Research、Board Prep …
-- 🗓️ **9个定时任务** — Morning Briefing、Portfolio News、Weekly Pipeline …
-- 💼 **募资运营模块** — Fund Accounting、LP Reporting、Capital Call …
-- 📊 **Next.js 管理面板** — Portfolio 全景可视化管理
-
-👉 **项目地址：[ruiyang-xu/GPilot](https://github.com/ruiyang-xu/GPilot)**
-
-如果你觉得 GPilot 有用，欢迎给个 Star ⭐
 
 ---
 
