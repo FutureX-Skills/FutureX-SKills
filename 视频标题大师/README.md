@@ -5,5 +5,5 @@
 ## 一键安装
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/FutureX-Skills/futurex-skills/main/视频标题大师/install.sh)
+curl -fsSL https://raw.githubusercontent.com/FutureX-Skills/futurex-skills/main/视频标题大师/install.sh | bash
 ```
