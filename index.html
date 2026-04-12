@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FutureX Skills 知识库</title>
+<style>
+  :root {
+    --navy: #002958;
+    --gold: #b45309;
+    --gray: #989898;
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+    --text: #1f2937;
+    --text-light: #6b7280;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', 'Noto Sans SC', -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+  a { text-decoration: none; color: inherit; }
+
+  /* Header */
+  header {
+    background: var(--navy);
+    color: white;
+    padding: 60px 20px 50px;
+    text-align: center;
+  }
+  header h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+  header p { font-size: 1.05rem; opacity: 0.85; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+  header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+  header .stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  header .stat { text-align: center; }
+  header .stat .num { font-size: 2rem; font-weight: 700; }
+  header .stat .label { font-size: 0.8rem; opacity: 0.7; margin-top: 2px; }
+
+  /* Search */
+  .search-bar {
+    max-width: 640px;
+    margin: -25px auto 30px;
+    padding: 0 20px;
+    position: relative;
+  }
+  .search-bar input {
+    width: 100%;
+    padding: 16px 24px 16px 52px;
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    outline: none;
+    transition: box-shadow 0.2s;
+  }
+  .search-bar input:focus { box-shadow: 0 4px 32px rgba(0,0,0,0.18); }
+  .search-bar .icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 0.4;
+  }
+
+  /* Filter tabs */
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 20px 30px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: white;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: var(--text-light);
+  }
+  .filter-btn:hover { border-color: var(--navy); color: var(--navy); }
+  .filter-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+  /* Container */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* Section */
+  .section { margin-bottom: 50px; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-icon { font-size: 1.5rem; }
+  .section-title { font-size: 1.2rem; font-weight: 700; color: var(--navy); }
+  .section-count {
+    margin-left: auto;
+    background: var(--navy);
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+
+  /* Cards grid */
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+  /* Card */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    transition: all 0.2s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover {
+    border-color: var(--navy);
+    box-shadow: 0 6px 24px rgba(0,41,88,0.1);
+    transform: translateY(-2px);
+  }
+  .card .card-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .card .card-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; color: var(--navy); }
+  .card .card-desc { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; }
+  .card .card-tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: #f0f4ff;
+    color: #3b5bdb;
+    font-weight: 600;
+  }
+  .card .card-tag.ext { background: #f0fff4; color: #2f9e44; }
+  .card .card-tag.team { background: #fff4f0; color: #e8590c; }
+  .card .card-tag.gpilot { background: #fff9db; color: #f08c00; }
+  .card .arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    font-size: 1.1rem;
+    color: var(--navy);
+  }
+  .card:hover .arrow { opacity: 1; transform: translateY(-50%) translateX(3px); }
+
+  /* Sub-group */
+  .sub-group { margin-bottom: 24px; }
+  .sub-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sub-title a { color: var(--gold); font-size: 0.78rem; }
+  .sub-title a:hover { text-decoration: underline; }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--text-light);
+    font-size: 0.82rem;
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+  footer a { color: var(--navy); font-weight: 600; }
+
+  /* No results */
+  .no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+    display: none;
+  }
+  .no-results .emoji { font-size: 3rem; margin-bottom: 12px; }
+  .no-results.visible { display: block; }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.7rem; }
+    .cards { grid-template-columns: 1fr; }
+    .stats { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">🌐 天际资本 · 全部开源</div>
+  <h1>FutureX Skills 知识库</h1>
+  <p>天际资本 AI Skills 资产沉淀仓库，覆盖投研、内容创作、运营提效等全场景智能体工具集</p>
+  <div class="stats">
+    <div class="stat"><div class="num">26</div><div class="label">天际内部 Skills</div></div>
+    <div class="stat"><div class="num">28</div><div class="label">外部精选 Skills</div></div>
+    <div class="stat"><div class="num">1</div><div class="label">CEO 开源项目</div></div>
+    <div class="stat"><div class="num">55+</div><div class="label">Skills 合计</div></div>
+  </div>
+</header>
+
+<div class="search-bar">
+  <span class="icon">🔍</span>
+  <input type="text" id="searchInput" placeholder="搜索 Skills名称或描述..." oninput="filter()">
+</div>
+
+<div class="filters">
+  <button class="filter-btn active" onclick="setFilter('all', this)">全部</button>
+  <button class="filter-btn" onclick="setFilter('team', this)">天际内部</button>
+  <button class="filter-btn" onclick="setFilter('ext', this)">外部精选</button>
+  <button class="filter-btn" onclick="setFilter('gpilot', this)">GPilot</button>
+</div>
+
+<div class="container" id="container">
+
+  <!-- 天际团队SKills库 -->
+  <div class="section" data-cat="team">
+    <div class="section-header">
+      <span class="section-icon">🔧</span>
+      <span class="section-title">天际团队SKills库</span>
+      <span class="section-count">26 个</span>
+    </div>
+    <div class="cards">
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/研报助手'">
+        <div class="card-icon">📊</div>
+        <div class="card-name">研报助手</div>
+        <div class="card-desc">MoE 多智能体调度中心，生成投行级尽调报告</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/GPilot-Simon'">
+        <div class="card-icon">🚀</div>
+        <div class="card-name">GPilot-Simon</div>
+        <div class="card-desc">CEO Simon 多智能体投资管理系统</div>
+        <div class="card-tag gpilot">CEO开源</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/视频标题大师'">
+        <div class="card-icon">🎬</div>
+        <div class="card-name">视频标题大师</div>
+        <div class="card-desc">短视频封面标题与简介生成（抖音/视频号/小红书）</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/硅谷季度报告'">
+        <div class="card-icon">📈</div>
+        <div class="card-name">硅谷季度报告</div>
+        <div class="card-desc">VC 赛道趋势分析报告，追踪过去90天投资变化</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/社媒营销'">
+        <div class="card-icon">📱</div>
+        <div class="card-name">社媒营销</div>
+        <div class="card-desc">LinkedIn/TikTok/Meta/YouTube/X 多平台内容创作</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/社媒内容处理'">
+        <div class="card-icon">🖼️</div>
+        <div class="card-name">社媒内容处理</div>
+        <div class="card-desc">图片水印/文字标注/视频拼接/多平台尺寸适配</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/AI内容写作助手'">
+        <div class="card-icon">✍️</div>
+        <div class="card-name">AI内容写作助手</div>
+        <div class="card-desc">AI 行业热点深度长文，5000字+Word输出</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/公众号排版助手'">
+        <div class="card-icon">📝</div>
+        <div class="card-name">公众号排版助手</div>
+        <div class="card-desc">微信公众号 HTML 排版，天际一贯风格</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/LinkedIn内容助手'">
+        <div class="card-icon">💼</div>
+        <div class="card-name">LinkedIn内容助手</div>
+        <div class="card-desc">LinkedIn 短帖子+长文章生成（英中双语）</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/播客后期助手'">
+        <div class="card-icon">🎙️</div>
+        <div class="card-name">播客后期助手</div>
+        <div class="card-desc">双语播客后期，文字稿→多平台适配内容</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/投资-Memo'">
+        <div class="card-icon">📋</div>
+        <div class="card-name">投资-Memo</div>
+        <div class="card-desc">VC 投资备忘录/Deal Memo 撰写</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/立项报告'">
+        <div class="card-icon">📃</div>
+        <div class="card-name">立项报告</div>
+        <div class="card-desc">中文 VC 立项报告撰写，从零散信息整理成专业报告</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/项目立项投资报告'">
+        <div class="card-icon">📑</div>
+        <div class="card-name">项目立项投资报告</div>
+        <div class="card-desc">标准立项框架，生成完整投资报告</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/PE募资追踪器'">
+        <div class="card-icon">💰</div>
+        <div class="card-name">PE募资追踪器</div>
+        <div class="card-desc">全球 PE/VC 募资动态追踪+LP分析</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/PIB投研搜索'">
+        <div class="card-icon">🔎</div>
+        <div class="card-name">PIB投研搜索</div>
+        <div class="card-desc">私募公司 VC 风格投研备忘录生成</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/VC创始人会面准备'">
+        <div class="card-icon">🤝</div>
+        <div class="card-name">VC创始人会面准备</div>
+        <div class="card-desc">创始人会面问题清单生成，英文定制化</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/会议纪要整理助手'">
+        <div class="card-icon">🗒️</div>
+        <div class="card-name">会议纪要整理助手</div>
+        <div class="card-desc">录音转文字→结构化会议纪要</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/事项提醒'">
+        <div class="card-icon">⏰</div>
+        <div class="card-name">事项提醒</div>
+        <div class="card-desc">Excel生日列表→飞书日历年度提醒</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/旅行规划助手'">
+        <div class="card-icon">🌍</div>
+        <div class="card-name">旅行规划助手</div>
+        <div class="card-desc">保姆级旅行规划，小白友好</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/语音合成助手'">
+        <div class="card-icon">🎧</div>
+        <div class="card-name">语音合成助手</div>
+        <div class="card-desc">TTS 多模型语音合成（DIA/Kokoro/Chatterbox等）</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/云Token监控'">
+        <div class="card-icon">☁️</div>
+        <div class="card-name">云Token监控</div>
+        <div class="card-desc">多云厂商 Token 消耗监控+飞书推送</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/多媒体处理助手'">
+        <div class="card-icon">🎨</div>
+        <div class="card-name">多媒体处理助手</div>
+        <div class="card-desc">图片处理+PDF处理（调整/裁剪/合并/压缩）</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/小红书自动发布'">
+        <div class="card-icon">📕</div>
+        <div class="card-name">小红书自动发布</div>
+        <div class="card-desc">小红书自动化发布（xiaohongshu-mcp）</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/费用报销合规检查'">
+        <div class="card-icon">✅</div>
+        <div class="card-name">费用报销合规检查</div>
+        <div class="card-desc">收据与报销单交叉核对，合规审查摘要</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/金融网页构建器'">
+        <div class="card-icon">📊</div>
+        <div class="card-name">金融网页构建器</div>
+        <div class="card-desc">Goldman Sachs 风格 Web Artifacts 构建</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/TODO任务追踪'">
+        <div class="card-icon">📌</div>
+        <div class="card-name">TODO任务追踪</div>
+        <div class="card-desc">持久化 TODO.md 任务清单</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/AI-VC推文助手'">
+        <div class="card-icon">🐦</div>
+        <div class="card-name">AI-VC推文助手</div>
+        <div class="card-desc">VC 风格 Twitter/X 帖子生成</div>
+        <div class="card-tag team">天际内部</div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 外部精选Skills -->
+  <div class="section" data-cat="ext">
+    <div class="section-header">
+      <span class="section-icon">🌐</span>
+      <span class="section-title">外部精选Skills</span>
+      <span class="section-count">28 个</span>
+    </div>
+
+    <!-- 李继刚 -->
+    <div class="sub-group">
+      <div class="sub-title">📚 李继刚skills（16个）<a href="https://github.com/lijigang/ljg-skills" target="_blank">来源 →</a></div>
+      <div class="cards">
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-card'">
+          <div class="card-icon">🃏</div><div class="card-name">ljg-card</div><div class="card-desc">内容铸造成 PNG 海报/信息图</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-invest'">
+          <div class="card-icon">💹</div><div class="card-name">ljg-invest</div><div class="card-desc">投资分析报告</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-learn'">
+          <div class="card-icon">🧠</div><div class="card-name">ljg-learn</div><div class="card-desc">概念解剖（8维度）</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-paper'">
+          <div class="card-icon">📄</div><div class="card-name">ljg-paper</div><div class="card-desc">论文阅读（给普通人读）</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-paper-river'">
+          <div class="card-icon">🌊</div><div class="card-name">ljg-paper-river</div><div class="card-desc">论文溯源（问题演化史）</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-plain'">
+          <div class="card-icon">🗣️</div><div class="card-name">ljg-plain</div><div class="card-desc">说人话（12岁能懂的解释）</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-rank'">
+          <div class="card-icon">⚖️</div><div class="card-name">ljg-rank</div><div class="card-desc">降秩分析（找不可再少的力）</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-relationship'">
+          <div class="card-icon">🔗</div><div class="card-name">ljg-relationship</div><div class="card-desc">关系分析（结构+精神分析）</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-roundtable'">
+          <div class="card-icon">🎭</div><div class="card-name">ljg-roundtable</div><div class="card-desc">圆桌辩论框架</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-think'">
+          <div class="card-icon">🎯</div><div class="card-name">ljg-think</div><div class="card-desc">追本之箭（纵向深钻）</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-travel'">
+          <div class="card-icon">✈️</div><div class="card-name">ljg-travel</div><div class="card-desc">深度旅行研究</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-word'">
+          <div class="card-icon">📖</div><div class="card-name">ljg-word</div><div class="card-desc">英语单词深度掌握</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-writes'">
+          <div class="card-icon">✏️</div><div class="card-name">ljg-writes</div><div class="card-desc">写作引擎（写中想透）</div><div class="card-tag ext">李继刚</div><div class="arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 43-Agent-skills -->
+    <div class="sub-group">
+      <div class="sub-title">🤖 43-Agent-skills（10个）<a href="https://github.com/43COLLEGE/43-Agent-skills" target="_blank">来源 →</a></div>
+      <div class="cards">
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/chat-archiver'">
+          <div class="card-icon">💬</div><div class="card-name">chat-archiver</div><div class="card-desc">聊天记录归档</div><div class="card-tag ext">43-Agent</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/email-invoice-processor'">
+          <div class="card-icon">📧</div><div class="card-name">email-invoice-processor</div><div class="card-desc">邮件发票处理</div><div class="card-tag ext">43-Agent</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/feishu-assistant'">
+          <div class="card-icon">📑</div><div class="card-name">feishu-assistant</div><div class="card-desc">飞书助手</div><div class="card-tag ext">43-Agent</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/find-skills'">
+          <div class="card-icon">🔍</div><div class="card-name">find-skills</div><div class="card-desc">技能发现</div><div class="card-tag ext">43-Agent</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/follow-builders'">
+          <div class="card-icon">🚶</div><div class="card-name">follow-builders</div><div class="card-desc">追踪创业者动态</div><div class="card-tag ext">43-Agent</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/media-transcriber'">
+          <div class="card-icon">🎙️</div><div class="card-name">media-transcriber</div><div class="card-desc">媒体转录</div><div class="card-tag ext">43-Agent</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/social-media-scout'">
+          <div class="card-icon">🌐</div><div class="card-name">social-media-scout</div><div class="card-desc">社交媒体情报</div><div class="card-tag ext">43-Agent</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/video-creator'">
+          <div class="card-icon">🎬</div><div class="card-name">video-creator</div><div class="card-desc">视频创作（含完整规则集）</div><div class="card-tag ext">43-Agent</div><div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/web-browser'">
+          <div class="card-icon">🌍</div><div class="card-name">web-browser</div><div class="card-desc">浏览器自动化</div><div class="card-tag ext">43-Agent</div><div class="arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 单个精选 -->
+    <div class="sub-group">
+      <div class="sub-title">🔧 其他精选工具</div>
+      <div class="cards">
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/qiaomu-markdown-proxy'">
+          <div class="card-icon">📎</div>
+          <div class="card-name">qiaomu-markdown-proxy</div>
+          <div class="card-desc">URL → Markdown 转换（微信公众号/飞书/PDF/YouTube）</div>
+          <div class="card-tag ext">精选</div>
+          <div style="font-size:0.7rem;color:#999;margin-top:6px;">来源：joeseesun/qiaomu-markdown-proxy</div>
+          <div class="arrow">→</div>
+        </div>
+        <div class="card" onclick="location.href='https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/skill-creator'">
+          <div class="card-icon">🛠️</div>
+          <div class="card-name">skill-creator</div>
+          <div class="card-desc">Anthropic 官方 Skill 构建工具（分析器/比较器/评分器）</div>
+          <div class="card-tag ext">精选</div>
+          <div style="font-size:0.7rem;color:#999;margin-top:6px;">来源：anthropics/skills</div>
+          <div class="arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GPilot-Simon -->
+  <div class="section" data-cat="gpilot">
+    <div class="section-header">
+      <span class="section-icon">⭐</span>
+      <span class="section-title">CEO 开源项目：GPilot-Simon</span>
+      <span class="section-count">独立展示</span>
+    </div>
+    <div class="cards">
+      <div class="card" onclick="location.href='https://github.com/ruiyang-xu/GPilot'" style="border-color:#f08c00;background:linear-gradient(135deg,#fff9db,#fff);">
+        <div class="card-icon" style="font-size:2.2rem;">🚀</div>
+        <div class="card-name">GPilot-Simon</div>
+        <div class="card-desc">Simon 独立开发的多智能体投资管理系统，面向 VC/PE 投资人的 AI 原生工作流框架</div>
+        <div style="margin-top:10px;font-size:0.78rem;color:#666;line-height:1.5;">
+          🤖 8个专用 Agent · 📋 19个投研命令<br>
+          🗓️ 9个定时任务 · 💼 募资运营模块<br>
+          📊 Next.js 管理面板
+        </div>
+        <div class="card-tag gpilot">CEO 开源</div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="no-results" id="noResults">
+  <div class="emoji">🔍</div>
+  <div>没有找到匹配的 Skills</div>
+</div>
+
+<footer>
+  <a href="https://github.com/FutureX-Skills/FutureX-SKills" target="_blank">🌐 FutureX-Skills/FutureX-SKills</a> ·
+  天际资本（FutureX Capital）出品 ·
+  <a href="mailto:capper@futurexcapital.com">capper@futurexcapital.com</a>
+</footer>
+
+<script>
+let currentFilter = 'all';
+
+function setFilter(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));;
+  btn.classList.add('active');
+  filter();
+}
+
+function filter() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  let visibleCount = 0;
+
+  document.querySelectorAll('.section').forEach(sec => {
+    const secCat = sec.getAttribute('data-cat');
+    const matchesFilter = currentFilter === 'all' || secCat === currentFilter;
+
+    let hasVisible = false;
+    sec.querySelectorAll('.card').forEach(card => {
+      const name = card.querySelector('.card-name').textContent.toLowerCase();
+      const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+      const match = (name.includes(q) || desc.includes(q)) && matchesFilter;
+      card.style.display = match ? '' : 'none';
+      if (match) hasVisible = true;
+    });
+
+    sec.style.display = hasVisible ? '' : 'none';
+    if (hasVisible) visibleCount++;
+  });
+
+  document.getElementById('noResults').classList.toggle('visible', visibleCount === 0);
+}
+</script>
+
+</body>
+</html>
