@@ -1,6 +1,6 @@
 #!/bin/bash
 REPO="FutureX-Skills/futurex-skills"
-SKILL="飞书生日同步"
+SKILL="事项提醒"
 TARGET="$HOME/.agents/skills/$SKILL"
 mkdir -p "$TARGET"
 curl -fsSL "https://raw.githubusercontent.com/$REPO/main/$SKILL/SKILL.md" -o "$TARGET/SKILL.md"
