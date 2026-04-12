@@ -9,9 +9,9 @@
 | 类别 | 数量 | 说明 |
 |------|------|------|
 | 🔧 天际团队自建 Skills | 26 个 | 覆盖投研、内容、运营等多场景 |
-| 🌐 外部精选 Skills | 17 个 | qiaomu-markdown-proxy + 李继刚 16 个 |
+| 🌐 外部精选 Skills | 28 个 | 李继刚 16 + qiaomu 1 + 43-Agent 10 + skill-creator 1 |
 | ⭐ CEO 开源项目 | 1 个 | GPilot-Simon（独立展示） |
-| **合计** | **~44 个** | 持续增加中 |
+| **合计** | **~55 个** | 持续增加中 |
 
 ---
 
@@ -42,7 +42,7 @@
 | 播客/内容生产 | `播客后期助手`、`公众号排版助手`、`AI内容写作助手` |
 | 投资业务提效 | `投资-Memo`、`VC创始人会面准备`、`会议纪要整理助手`、`PE募资追踪器` |
 | 运营与合规 | `费用报销合规检查`、`事项提醒`、`云Token监控`、`TODO任务追踪` |
-| 外部精选工具 | `qiaomu-markdown-proxy`、`李继刚skills/` |
+| 外部精选工具 | `qiaomu-markdown-proxy`、`李继刚skills/`、`43-Agent-skills/` |
 
 ---
 
@@ -71,22 +71,40 @@
 ```
 futurex-skills/
 ├── 外部精选Skills/          # 天际精选的优质开源 Skills，持续更新
-│   ├── qiaomu-markdown-proxy/     # URL → Markdown 转换（微信公众号/飞书/PDF/YouTube）
-│   └── 李继刚skills/              # 李继刚老师 Skills 合集（16个）
-│       ├── ljg-card               # 内容铸造成 PNG 海报/信息图
-│       ├── ljg-paper              # 论文阅读（给普通人读的论文解析）
-│       ├── ljg-paper-river        # 论文溯源（问题演化史）
-│       ├── ljg-invest             # 投资分析报告
-│       ├── ljg-learn              # 概念解剖（8维度）
-│       ├── ljg-plain              # 说人话（12岁能懂的解释）
-│       ├── ljg-rank               # 降秩分析（找不可再少的力）
-│       ├── ljg-relationship       # 关系分析（结构诊断+精神分析）
-│       ├── ljg-roundtable         # 圆桌辩论框架
-│       ├── ljg-think              # 追本之箭（纵向深钻）
-│       ├── ljg-travel             # 深度旅行研究
-│       ├── ljg-word               # 英语单词深度掌握
-│       ├── ljg-writes             # 写作引擎（写中想透）
-│       └── ...（共16个）
+│   ├── 李继刚skills/              # 李继刚老师 Skills 合集（16个）
+│   │   ├── ljg-card               # 内容铸造成 PNG 海报/信息图
+│   │   ├── ljg-paper              # 论文阅读（给普通人读的论文解析）
+│   │   ├── ljg-paper-river        # 论文溯源（问题演化史）
+│   │   ├── ljg-invest             # 投资分析报告
+│   │   ├── ljg-learn              # 概念解剖（8维度）
+│   │   ├── ljg-plain              # 说人话（12岁能懂的解释）
+│   │   ├── ljg-rank               # 降秩分析（找不可再少的力）
+│   │   ├── ljg-relationship       # 关系分析（结构诊断+精神分析）
+│   │   ├── ljg-roundtable         # 圆桌辩论框架
+│   │   ├── ljg-think              # 追本之箭（纵向深钻）
+│   │   ├── ljg-travel             # 深度旅行研究
+│   │   ├── ljg-word               # 英语单词深度掌握
+│   │   ├── ljg-writes             # 写作引擎（写中想透）
+│   │   └── ...（共16个）
+│   │
+│   ├── 43-Agent-skills        # 来源：[43COLLEGE/43-Agent-skills](https://github.com/43COLLEGE/43-Agent-skills)
+│   │   ├── chat-archiver            # 聊天记录归档
+│   │   ├── email-invoice-processor  # 邮件发票处理
+│   │   ├── feishu-assistant         # 飞书助手
+│   │   ├── find-skills              # 技能发现
+│   │   ├── follow-builders          # 追踪创业者动态
+│   │   ├── media-transcriber       # 媒体转录
+│   │   ├── social-media-scout       # 社交媒体情报
+│   │   ├── video-creator            # 视频创作（含完整规则集）
+│   │   └── web-browser              # 浏览器自动化
+│   │
+│   ├── qiaomu-markdown-proxy  # 来源：[joeseesun/qiaomu-markdown-proxy](https://github.com/joeseesun/qiaomu-markdown-proxy)
+│   │   └── SKILL.md                 # URL → Markdown（微信公众号/飞书/PDF/YouTube等）
+│   │
+│   └── skill-creator           # 来源：[anthropics/skills](https://github.com/anthropics/skills)
+│       ├── agents/                   # Analyzer / Comparator / Grader
+│       ├── scripts/                  # validate / package / run_eval 等
+│       └── eval-viewer/              # 评估可视化工具
 │
 └── 天际团队SKills库/        # 天际资本团队自建 Skills（26个）
     ├── 研报助手                  # MoE 多智能体调度中心，生成投行级尽调报告
