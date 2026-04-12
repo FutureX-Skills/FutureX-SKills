@@ -119,5 +119,6 @@ futurex-skills/
 ## 📮 联系方式
 
 **天际资本（FutureX Capital）**
+📧 capper@futurexcapital.com
 
 *Built for FutureX Team · Open for Everyone*
