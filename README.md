@@ -66,6 +66,21 @@
 
 ---
 
+## 🌐 外部精选Skills
+
+我们收录来自社区的优质开源 Skills，所有来源均标注原始仓库链接。
+
+| 来源 | 仓库 | 内容 |
+|------|------|------|
+| **李继刚skills** | — | 16个认知/创作类 Skills（概念解剖、论文阅读、写作引擎等） |
+| **43-Agent-skills** | [43COLLEGE/43-Agent-skills](https://github.com/43COLLEGE/43-Agent-skills) | 10个实用 Agent Skills（飞书助手、浏览器自动化、视频创作等） |
+| **qiaomu-markdown-proxy** | [joeseesun/qiaomu-markdown-proxy](https://github.com/joeseesun/qiaomu-markdown-proxy) | URL → Markdown 转换（微信公众号/飞书/PDF/YouTube） |
+| **skill-creator** | [anthropics/skills](https://github.com/anthropics/skills) | Anthropic 官方 Skill 构建工具（分析器/比较器/评分器） |
+
+> 收录标准：功能明确、维护活跃、与 AI/VC 业务高度相关。
+
+---
+
 ## 📁 仓库结构
 
 ```
