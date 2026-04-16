@@ -629,6 +629,41 @@
         }
 
         .modal-actions { display: flex; gap: 12px; }
+
+        .feedback-form { margin-bottom: 20px; }
+        .feedback-title {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .feedback-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: var(--bd-blue);
+            border-radius: 10px;
+            font-family: var(--font-body);
+            font-size: 13px;
+            resize: none;
+            outline: none;
+            background: var(--paper);
+        }
+        .feedback-form textarea:focus {
+            border-color: var(--primary);
+        }
+        .feedback-actions {
+            display: flex; gap: 10px; margin-top: 12px;
+        }
+        .feedback-result {
+            margin-top: 12px;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .feedback-result.success { background: rgba(88,86,214,0.1); color: var(--primary); }
+        .feedback-result.error { background: rgba(255,55,95,0.1); color: var(--accent); }
+
         .modal-btn {
             flex: 1; padding: 13px 20px;
             border-radius: 12px;
@@ -1062,8 +1097,21 @@
             <p class="modal-category" id="modalCategory">分类 · 来源</p>
             <p id="modalDesc">描述</p>
             <p class="modal-author" id="modalAuthor" style="display:none;"></p>
-            <div class="modal-actions">
+
+            <!-- Feedback Form -->
+            <div class="feedback-form" id="feedbackForm" style="display:none;">
+                <div class="feedback-title">匿名反馈</div>
+                <textarea id="feedbackText" placeholder="对这个 Skill 有什么建议？使用中遇到什么问题？" rows="3"></textarea>
+                <div class="feedback-actions">
+                    <button class="modal-btn modal-secondary" id="feedbackCancel">取消</button>
+                    <button class="modal-btn modal-primary" id="feedbackSubmit">提交反馈</button>
+                </div>
+                <div class="feedback-result" id="feedbackResult" style="display:none;"></div>
+            </div>
+
+            <div class="modal-actions" id="modalActions">
                 <button class="modal-btn modal-secondary" id="modalClose">关闭</button>
+                <button class="modal-btn modal-secondary" id="modalFeedback">反馈</button>
                 <a href="#" class="modal-btn modal-primary" id="modalGo" target="_blank">前往 GitHub →</a>
             </div>
         </div>
@@ -1214,6 +1262,59 @@
 
         function closeModal() {
             document.getElementById('modalOverlay').classList.remove('visible');
+            document.getElementById('feedbackForm').style.display = 'none';
+            document.getElementById('modalActions').style.display = 'flex';
+            document.getElementById('feedbackText').value = '';
+            document.getElementById('feedbackResult').style.display = 'none';
+        }
+
+        let currentSkillName = '';
+
+        function openFeedbackForm() {
+            currentSkillName = document.getElementById('modalTitle').textContent;
+            document.getElementById('modalActions').style.display = 'none';
+            document.getElementById('feedbackForm').style.display = 'block';
+        }
+
+        function submitFeedback() {
+            const feedback = document.getElementById('feedbackText').value.trim();
+            if (!feedback) {
+                showFeedbackResult('请输入反馈内容', 'error');
+                return;
+            }
+
+            const btn = document.getElementById('feedbackSubmit');
+            btn.disabled = true;
+            btn.textContent = '提交中...';
+
+            fetch('/api/feedback', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    skillName: currentSkillName,
+                    feedback: feedback,
+                    version: 'v3'
+                })
+            }).then(r => r.json()).then(data => {
+                if (data.success) {
+                    showFeedbackResult('反馈已收到，感谢！', 'success');
+                    setTimeout(closeModal, 1500);
+                } else {
+                    showFeedbackResult(data.error || '提交失败，请重试', 'error');
+                }
+            }).catch(() => {
+                showFeedbackResult('提交失败，请重试', 'error');
+            }).finally(() => {
+                btn.disabled = false;
+                btn.textContent = '提交反馈';
+            });
+        }
+
+        function showFeedbackResult(msg, type) {
+            const el = document.getElementById('feedbackResult');
+            el.textContent = msg;
+            el.className = 'feedback-result ' + type;
+            el.style.display = 'block';
         }
 
         /* ── Scroll reveal ── */
@@ -1261,6 +1362,12 @@
             });
 
             document.getElementById('modalClose').addEventListener('click', closeModal);
+            document.getElementById('modalFeedback').addEventListener('click', openFeedbackForm);
+            document.getElementById('feedbackCancel').addEventListener('click', () => {
+                document.getElementById('feedbackForm').style.display = 'none';
+                document.getElementById('modalActions').style.display = 'flex';
+            });
+            document.getElementById('feedbackSubmit').addEventListener('click', submitFeedback);
             document.getElementById('modalOverlay').addEventListener('click', e => {
                 if (e.target.id === 'modalOverlay') closeModal();
             });
