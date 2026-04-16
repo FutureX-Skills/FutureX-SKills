@@ -461,7 +461,16 @@
             font-size: 13px;
             color: var(--ink-light);
             line-height: 1.7;
-            margin-bottom: 16px;
+            margin-bottom: 8px;
+        }
+
+        .card-detail {
+            font-size: 12px;
+            color: var(--ink-muted);
+            line-height: 1.6;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 2px solid var(--primary);
         }
 
         .card-footer {
@@ -1079,55 +1088,55 @@
         };
 
         const skills = [
-            { name:"研报助手", description:"MoE 多智能体调度中心，生成投行级尽调报告", category:"投研", source:"builtin", author:"Xavier", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/研报助手" },
-            { name:"PIB投研搜索", description:"私募公司 VC 风格投研备忘录", category:"投研", source:"builtin", author:"张翰钦", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/PIB投研搜索" },
-            { name:"投资-Memo", description:"VC 投资备忘录/Deal Memo 撰写", category:"投研", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/投资-Memo" },
-            { name:"立项报告", description:"中文 VC 立项报告撰写", category:"投研", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/立项报告" },
-            { name:"项目立项投资报告", description:"标准立项框架生成完整投资报告", category:"投研", source:"builtin", author:"李美尚", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/项目立项投资报告" },
-            { name:"硅谷季度报告", description:"VC 赛道趋势分析报告（90天）", category:"投研", source:"builtin", author:"Mickey", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/硅谷季度报告" },
-            { name:"PE募资追踪器", description:"全球 PE/VC 募资动态追踪+LP分析", category:"投研", source:"builtin", author:"周凱", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/PE募资追踪器" },
-            { name:"视频标题大师", description:"短视频封面标题与简介生成", category:"内容创作", source:"builtin", author:"Capper", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/视频标题大师" },
-            { name:"AI内容写作助手", description:"AI 行业热点深度长文（5000字+Word）", category:"内容创作", source:"builtin", author:"Joseph", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/AI内容写作助手" },
-            { name:"公众号排版助手", description:"微信公众号 HTML 排版", category:"内容创作", source:"builtin", author:"肖迪馨", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/公众号排版助手" },
-            { name:"AI-VC推文助手", description:"VC 风格 Twitter/X 帖子生成", category:"内容创作", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/AI-VC推文助手" },
-            { name:"LinkedIn内容助手", description:"LinkedIn 短帖子+长文章生成", category:"内容创作", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/LinkedIn内容助手" },
-            { name:"播客后期助手", description:"双语播客后期处理", category:"内容创作", source:"builtin", author:"TongTong", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/播客后期助手" },
-            { name:"旅行规划助手", description:"保姆级旅行规划", category:"内容创作", source:"builtin", author:"朱颜", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/旅行规划助手" },
-            { name:"金融网页构建器", description:"Goldman Sachs 风格 Web Artifacts", category:"内容创作", source:"builtin", author:"Simon", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/金融网页构建器" },
-            { name:"社媒营销", description:"LinkedIn/TikTok/Meta/YouTube/X 多平台", category:"社媒运营", source:"builtin", author:"Angela", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/社媒营销" },
-            { name:"社媒内容处理", description:"图片水印/文字标注/视频拼接", category:"社媒运营", source:"builtin", author:"林秋彤Echo", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/社媒内容处理" },
-            { name:"小红书自动发布", description:"小红书自动化发布", category:"社媒运营", source:"builtin", author:"Ben", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/小红书自动发布" },
-            { name:"语音合成助手", description:"TTS 多模型语音合成", category:"社媒运营", source:"builtin", author:"Annie", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/语音合成助手" },
-            { name:"多媒体处理助手", description:"图片处理+PDF处理", category:"社媒运营", source:"builtin", author:"董鹏", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/多媒体处理助手" },
-            { name:"会议纪要整理助手", description:"录音转文字→结构化会议纪要", category:"效率工具", source:"builtin", author:"王涵", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/会议纪要整理助手" },
-            { name:"VC创始人会面准备", description:"创始人会面问题清单生成", category:"效率工具", source:"builtin", author:"Michael Leung", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/VC创始人会面准备" },
-            { name:"TODO任务追踪", description:"持久化 TODO.md 任务清单", category:"效率工具", source:"builtin", author:"鲁园", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/TODO任务追踪" },
-            { name:"事项提醒", description:"Excel生日列表→飞书日历提醒", category:"效率工具", source:"builtin", author:"杜薇", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/事项提醒" },
-            { name:"云Token监控", description:"多云厂商 Token 消耗监控", category:"效率工具", source:"builtin", author:"黄凯", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/云Token监控" },
-            { name:"费用报销合规检查", description:"收据与报销单交叉核对", category:"效率工具", source:"builtin", author:"Yvonne / Alex", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/费用报销合规检查" },
-            { name:"ljg-invest", description:"投资分析报告", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-learn", description:"概念解剖（8维度）", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-paper", description:"论文阅读（普通人版）", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-paper-river", description:"论文溯源（问题演化史）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-plain", description:"说人话（12岁能懂）", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-rank", description:"降秩分析", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-relationship", description:"关系分析", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-roundtable", description:"圆桌辩论框架", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-think", description:"追本之箭（纵向深钻）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-travel", description:"深度旅行研究", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-word", description:"英语单词深度掌握", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-writes", description:"写作引擎", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"ljg-card", description:"PNG 海报/信息图", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-            { name:"chat-archiver", description:"聊天记录归档", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-            { name:"feishu-assistant", description:"飞书助手", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-            { name:"follow-builders", description:"追踪创业者动态", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-            { name:"media-transcriber", description:"媒体转录", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-            { name:"social-media-scout", description:"社交媒体情报", category:"社媒运营", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-            { name:"video-creator", description:"视频创作", category:"社媒运营", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-            { name:"web-browser", description:"浏览器自动化", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-            { name:"qiaomu-markdown-proxy", description:"URL → Markdown", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/qiaomu-markdown-proxy" },
-            { name:"skill-creator", description:"Anthropic 官方构建工具", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/skill-creator" }
-        ];
+    { name:"研报助手", description:"FutureX Capital 多智能体调度中心（MoE Orchestrator）", detail:"多智能体调度中心，生成投行级尽调报告，支持一键安装", category:"投研", source:"builtin", author:"Xavier", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/研报助手" },
+    { name:"PIB投研搜索", description:"从公开信息生成私募公司的 VC 风格投资备忘录", detail:"PIB搜索工具，支持最新动态优先（<1年数据），包含投资亮点、运营/财务数据、竞争格局、上行潜力等模块", category:"投研", source:"builtin", author:"张翰钦", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/PIB投研搜索" },
+    { name:"投资-Memo", description:"VC 投资备忘录/Deal Memo 撰写工具", detail:"将原始笔记一键转化为专业的合伙人级投资报告", category:"投研", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/投资-Memo" },
+    { name:"立项报告", description:"中文 VC 立项报告撰写工具", detail:"将原始笔记或零散信息整理成专业的内部立项报告", category:"投研", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/立项报告" },
+    { name:"项目立项投资报告", description:"按标准立项报告框架生成完整投资立项报告", detail:"适用于立项报告、投资报告、项目过会材料、投资决策支持文档", category:"投研", source:"builtin", author:"李美尚", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/项目立项投资报告" },
+    { name:"硅谷季度报告", description:"深度 VC 赛道趋势分析报告生成工具", detail:"追踪过去三个月科技/AI赛道的投资变化、范式转移与产业动态，适用于投资委员会报告、LP更新", category:"投研", source:"builtin", author:"Mickey", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/硅谷季度报告" },
+    { name:"PE募资追踪器", description:"全球一级市场股权投资募资动态追踪工具", detail:"重点关注中国和美国市场，自动生成LP情报报告", category:"投研", source:"builtin", author:"周凱", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/PE募资追踪器" },
+    { name:"视频标题大师", description:"短视频封面标题与简介生成工具", detail:"支持抖音、视频号、小红书等平台，25个多风格封面标题", category:"内容创作", source:"builtin", author:"Capper", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/视频标题大师" },
+    { name:"AI内容写作助手", description:"AI行业热点深度长文工具", detail:"支持5000字以上中文长文+Word文档输出，触发词：写AI热点文章、AI日报/周报/深度报告", category:"内容创作", source:"builtin", author:"Joseph", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/AI内容写作助手" },
+    { name:"公众号排版助手", description:"微信公众号 HTML 排版工具", detail:"将文字内容转换为微信公众号可用HTML格式，参考天际一贯风格", category:"内容创作", source:"builtin", author:"肖迪馨", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/公众号排版助手" },
+    { name:"AI-VC推文助手", description:"VC Twitter/X 帖子生成工具", detail:"专为AI VC投资人设计，将投研洞察转化为高互动推文", category:"内容创作", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/AI-VC推文助手" },
+    { name:"LinkedIn内容助手", description:"LinkedIn 内容生成工具", detail:"短帖子（150-300词）+长文章（400-800词），中译英专业输出", category:"内容创作", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/LinkedIn内容助手" },
+    { name:"播客后期助手", description:"双语播客后期全套工具", detail:"将原始文字稿转换为多平台适配内容（公众号、小红书、B站、YouTube、TikTok等）", category:"内容创作", source:"builtin", author:"TongTong", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/播客后期助手" },
+    { name:"旅行规划助手", description:"保姆级旅行规划工具", detail:"分步问询、视觉友好、马蜂窝/小红书爆款攻略整合，输出可截图保存的完整行程方案", category:"内容创作", source:"builtin", author:"朱颜", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/旅行规划助手" },
+    { name:"金融网页构建器", description:"Goldman Sachs 风格 Web Artifacts 构建工具", detail:"使用React+TypeScript+Tailwind CSS+shadcn/ui创建专业金融分析网页", category:"内容创作", source:"builtin", author:"Simon", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/金融网页构建器" },
+    { name:"社媒营销", description:"跨平台社交媒体营销工具", detail:"Sustainable social media marketing across LinkedIn, TikTok, Meta, YouTube, X", category:"社媒运营", source:"builtin", author:"Angela", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/社媒营销" },
+    { name:"社媒内容处理", description:"社交媒体图片/视频处理自动化工具", detail:"图片加水印/文字标注、视频拼接合并、多平台尺寸适配（小红书/Twitter/Instagram等）", category:"社媒运营", source:"builtin", author:"林秋彤Echo", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/社媒内容处理" },
+    { name:"小红书自动发布", description:"小红书自动化发布工具", detail:"基于xiaohongshu-mcp+MCPorter，支持图片上传、标题填写、正文填写、标签设置", category:"社媒运营", source:"builtin", author:"Ben", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/小红书自动发布" },
+    { name:"语音合成助手", description:"Text-to-Speech 多模型工具", detail:"支持DIA TTS、Kokoro TTS、Chatterbox、Higgs Audio、VibeVoice，适用于产品演示、有声书、播客生成", category:"社媒运营", source:"builtin", author:"Annie", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/语音合成助手" },
+    { name:"多媒体处理助手", description:"图片处理+PDF处理工具", detail:"图片调整大小/裁剪/滤镜/格式转换、PDF文字编辑/图片插入/页面操作/合并拆分/压缩", category:"社媒运营", source:"builtin", author:"董鹏", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills��/多媒体处理助手" },
+    { name:"会议纪要整理助手", description:"录音转结构化会议纪要", detail:"将录音转文字整理为结构化会议纪要", category:"效率工具", source:"builtin", author:"王涵", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/会议纪要整理助手" },
+    { name:"VC创始人会面准备", description:"创始人会面问题清单生成", detail:"将公司信息转化为英文、梳理赛道框架、标注关键决策点，生成定制化创始人问题清单", category:"效率工具", source:"builtin", author:"Michael Leung", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/VC创始人会面准备" },
+    { name:"TODO任务追踪", description:"持久化 TODO.md 任务清单", detail:"在workspace根目录维护任务清单，支持添加/查看/完成/删除任务", category:"效率工具", source:"builtin", author:"鲁园", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/TODO任务追踪" },
+    { name:"事项提醒", description:"Excel生日列表→飞书日历提醒", detail:"将员工/好友生日列表同步到飞书日历，自动创建年度重复生日提醒", category:"效率工具", source:"builtin", author:"杜薇", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/事项提醒" },
+    { name:"云Token监控", description:"多云厂商 Token 消耗监控", detail:"监控阿里云/腾讯云/华为云/百度云/AWS/Azure/GCP/OpenAI/Anthropic等每日Token消耗，生成可视化图表", category:"效率工具", source:"builtin", author:"黄凯", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/云Token监控" },
+    { name:"费用报销合规检查", description:"收据与报销单交叉核对工具", detail:"报销单合规审查，标记差异和缺失项，生成合规审查摘要供人工审批", category:"效率工具", source:"builtin", author:"Yvonne / Alex", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/费用报销合规检查" },
+    { name:"ljg-invest", description:"投资分析报告", detail:"投资分析报告生成", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-learn", description:"概念解剖（8维度）", detail:"概念解剖（8维度）", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-paper", description:"论文阅读（普通人版）", detail:"论文阅读（普通人版）", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-paper-river", description:"论文溯源（问题演化史）", detail:"论文溯源（问题演化史）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-plain", description:"说人话（12岁能懂）", detail:"说人话（12岁能懂）", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-rank", description:"降秩分析", detail:"降秩分析", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部��选Skills/李继刚skills" },
+    { name:"ljg-relationship", description:"关系分析", detail:"关系分析", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-roundtable", description:"圆桌辩论框架", detail:"圆桌辩论框架", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-think", description:"追本之箭（纵向深钻）", detail:"追本之箭（纵向深钻）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-travel", description:"深度旅行研究", detail:"深度旅行研究", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-word", description:"英语单词深度掌握", detail:"英语单词深度掌握", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-writes", description:"写作引擎", detail:"写作引擎", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"ljg-card", description:"PNG 海报/信息图", detail:"PNG 海报/信息图", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
+    { name:"聊天记录归档", description:"聊天记录归档", detail:"聊天记录归档", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
+    { name:"飞书助手", description:"飞书助手", detail:"飞书助手", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
+    { name:"追踪创业者动态", description:"追踪创业者动态", detail:"追踪创业者动态", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
+    { name:"媒体转录", description:"媒体转录", detail:"媒体转录", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
+    { name:"社交媒体情报", description:"社交媒体情报", detail:"社交媒体情报", category:"社媒运营", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
+    { name:"视频创作", description:"视频创作", detail:"视频创作", category:"社媒运营", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
+    { name:"浏览器自动化", description:"浏览器自动化", detail:"浏览器自动化", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
+    { name:"qiaomu-markdown-proxy", description:"URL → Markdown", detail:"URL → Markdown", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/qiaomu-markdown-proxy" },
+    { name:"skill-creator", description:"Anthropic 官方构建工具", detail:"Anthropic 官方构建工具", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/skill-creator" }
+];
 
         let currentFilter = 'all', currentSearch = '';
 
@@ -1163,6 +1172,7 @@
                     <div class="card-mono">${icon} ${isTeam ? 'TEAM' : 'EXT'}</div>
                     <div class="card-name">${skill.name}</div>
                     <div class="card-desc">${skill.description}</div>
+                    ${skill.detail ? `<div class="card-detail">${skill.detail}</div>` : ''}
                     <div class="card-footer">
                         <span class="card-tag ${isTeam ? 'tag-team' : 'tag-ext'}">${skill.category}</span>
                         ${isTeam && skill.author ? `<span class="card-author"><span class="card-author-dot">●</span>${skill.author}</span>` : ''}
@@ -1188,7 +1198,7 @@
             document.getElementById('modalTitle').textContent = skill.name;
             document.getElementById('modalCategory').textContent =
                 skill.category + ' · ' + (isTeam ? '天际自建' : '外部精选');
-            document.getElementById('modalDesc').textContent = skill.description;
+            document.getElementById('modalDesc').innerHTML = skill.detail ? `<p style="margin-bottom:12px;font-weight:600;color:var(--ink);">${skill.description}</p><p>${skill.detail}</p>` : skill.description;
 
             const authorEl = document.getElementById('modalAuthor');
             if (isTeam && skill.author) {
