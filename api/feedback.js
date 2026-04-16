@@ -14,7 +14,10 @@ export default async function handler(req, res) {
   }
 
   if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
-    return res.status(500).json({ error: 'Airtable not configured' });
+    return res.status(500).json({
+      error: 'Airtable not configured',
+      debug: { hasKey: !!AIRTABLE_API_KEY, hasBase: !!AIRTABLE_BASE_ID }
+    });
   }
 
   const timestamp = new Date().toISOString();
@@ -37,15 +40,16 @@ export default async function handler(req, res) {
       })
     });
 
+    const data = await response.json();
+
     if (!response.ok) {
-      const error = await response.json();
-      console.error('Airtable error:', error);
-      return res.status(500).json({ error: 'Failed to save feedback' });
+      console.error('Airtable error:', data);
+      return res.status(500).json({ error: data });
     }
 
     return res.status(200).json({ success: true });
   } catch (e) {
     console.error('Error:', e);
-    return res.status(500).json({ error: 'Internal error' });
+    return res.status(500).json({ error: e.message });
   }
 }
