@@ -1,6 +1,6 @@
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
-const AIRTABLE_TABLE_ID = 'tbl5OvZMF84ExNAgX'; // 表 ID
+const AIRTABLE_TABLE_ID = 'tbl5OvZMF84ExNAgX';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -17,8 +17,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Airtable not configured' });
   }
 
-  const timestamp = new Date().toISOString();
-
   try {
     const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}`, {
       method: 'POST',
@@ -30,8 +28,7 @@ export default async function handler(req, res) {
         records: [{
           fields: {
             'Skill Name': skillName,
-            'Feedback': feedback.trim(),
-            'Timestamp': timestamp
+            'Feedback': feedback.trim()
           }
         }]
       })
