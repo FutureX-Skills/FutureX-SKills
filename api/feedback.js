@@ -11,10 +11,11 @@ export default async function handler(req, res) {
   }
 
   try {
+    const timestamp = new Date().toISOString();
     const message = {
       msg_type: 'text',
       content: JSON.stringify({
-        text: `📢 新反馈\n\nSkill: ${skillName}\n反馈: ${feedback.trim()}`
+        text: `📢 新反馈\n\nSkill: ${skillName}\n反馈: ${feedback.trim()}\n时间: ${timestamp}`
       })
     };
 
