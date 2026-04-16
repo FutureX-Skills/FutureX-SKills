@@ -875,15 +875,15 @@
         <div class="container" style="position:relative; overflow:hidden; min-height:80px;">
             <div class="stats-inner">
                 <div class="stat">
-                    <div class="stat-num" data-target="54">0</div>
+                    <div class="stat-num" id="statTotal" data-target="0">0</div>
                     <div class="stat-label">SKILLS 总数</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-num" data-target="26">0</div>
+                    <div class="stat-num" id="statBuiltin" data-target="0">0</div>
                     <div class="stat-label">天际自建</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-num" data-target="28">0</div>
+                    <div class="stat-num" id="statCurated" data-target="0">0</div>
                     <div class="stat-label">外部精选</div>
                 </div>
             </div>
@@ -1185,6 +1185,15 @@
 ];
 
         let currentFilter = 'all', currentSearch = '';
+
+        // Update stats dynamically
+        (function() {
+            const builtinCount = skills.filter(s => s.source === 'builtin').length;
+            const curatedCount = skills.filter(s => s.source === 'curated').length;
+            document.getElementById('statBuiltin').setAttribute('data-target', builtinCount);
+            document.getElementById('statCurated').setAttribute('data-target', curatedCount);
+            document.getElementById('statTotal').setAttribute('data-target', builtinCount + curatedCount);
+        })();
 
         function renderSkills() {
             const gb = document.getElementById('gridBuiltin');
