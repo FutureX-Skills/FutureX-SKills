@@ -1,12 +1,12 @@
-export default async function handler(request, response) {
-  if (request.method !== 'POST') {
-    return response.status(405).json({ error: 'Method not allowed' });
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { skillName, feedback, version } = request.body;
+  const { skillName, feedback, version } = req.body;
 
   if (!skillName || !feedback) {
-    return response.status(400).json({ error: 'Missing skillName or feedback' });
+    return res.status(400).json({ error: 'Missing skillName or feedback' });
   }
 
   const timestamp = new Date().toISOString();
@@ -15,15 +15,14 @@ export default async function handler(request, response) {
     skillName,
     feedback: feedback.trim(),
     version: version || 'unknown',
-    timestamp,
-    userAgent: request.headers.get('user-agent') || 'unknown'
+    timestamp
   };
 
-  // 存储到 JSON 文件（Vercel Serverless 文件系统）
-  const fs = await import('fs/promises');
-  const path = await import('path');
+  // Vercel Serverless 用 /tmp 目录
+  const fs = require('fs/promises');
+  const path = require('path');
 
-  const dataDir = path.join(process.cwd(), 'data');
+  const dataDir = '/tmp';
   const filePath = path.join(dataDir, 'feedback.json');
 
   let existing = [];
@@ -31,21 +30,19 @@ export default async function handler(request, response) {
     const data = await fs.readFile(filePath, 'utf-8');
     existing = JSON.parse(data);
   } catch (e) {
-    // 文件不存在，从头开始
+    // 文件不存在
   }
 
-  existing.unshift(entry); // 新反馈放前面
+  existing.unshift(entry);
 
   try {
-    await fs.mkdir(dataDir, { recursive: true });
     await fs.writeFile(filePath, JSON.stringify(existing, null, 2));
   } catch (e) {
     console.error('Write error:', e);
   }
 
-  return response.status(200).json({
+  return res.status(200).json({
     success: true,
-    message: 'Feedback submitted successfully',
-    entryId: entry.id
+    message: 'Feedback submitted successfully'
   });
 }
