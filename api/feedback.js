@@ -11,7 +11,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const timestamp = new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' }).replace(/\//g, '-');
+    const timestamp = new Date().toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' }).replace(/\//g, '-');
     const message = {
       msg_type: 'text',
       content: JSON.stringify({
