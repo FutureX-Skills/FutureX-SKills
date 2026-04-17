@@ -1,3 +1,17 @@
+# Skill-Vetter
+
+> Security-first vetting for OpenClaw skills. Powered by UseClawPro.
+
+## 一键安装
+
+```bash
+npx skills add https://github.com/FutureX-Skills/FutureX-SKills --skill Skill-Vetter
+```
+
+---
+
+## 完整说明
+
 # openclaw-skills-security
 
 Security-first skills for the **OpenClaw** ecosystem — maintained by **UseClawPro** (UseAI.pro).
