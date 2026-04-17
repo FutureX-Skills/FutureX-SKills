@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     const message = {
       msg_type: 'text',
       content: JSON.stringify({
-        text: `📢 新反馈\n\n🔹 Skill: ${skillName}\n🔹 创建人: ${author || '-'}\n🔹 反馈: ${feedback.trim()}\n🔹 时间: ${timestamp}`
+        text: `👻 新反馈\n\n👾 Skill: ${skillName}\n👤 创建人: ${author || '-'}\n📮 反馈: ${feedback.trim()}\n📅 时间: ${timestamp}`
       })
     };
 
