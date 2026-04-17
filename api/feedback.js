@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { skillName, feedback } = req.body;
+  const { skillName, author, feedback } = req.body;
   if (!skillName || !feedback) {
     return res.status(400).json({ error: 'Missing skillName or feedback' });
   }
@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     const message = {
       msg_type: 'text',
       content: JSON.stringify({
-        text: `📢 新反馈\n\nSkill: ${skillName}\n反馈: ${feedback.trim()}\n时间: ${timestamp}`
+        text: `📢 新反馈\n\n🔹 Skill: ${skillName}\n🔹 创建人: ${author || '-'}\n🔹 反馈: ${feedback.trim()}\n🔹 时间: ${timestamp}`
       })
     };
 

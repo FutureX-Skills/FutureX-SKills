@@ -1300,8 +1300,11 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     skillName: currentSkillName,
-                    feedback: feedback,
-                    version: 'v3'
+                    author: (() => {
+                        const s = skills.find(x => x.name === currentSkillName);
+                        return s && s.author || '';
+                    })(),
+                    feedback: feedback
                 })
             }).then(r => r.json()).then(data => {
                 if (data.success) {
