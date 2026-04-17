@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { skillName, feedback } = req.body;
+  const { skillName, author, feedback } = req.body;
   if (!skillName || !feedback) {
     return res.status(400).json({ error: 'Missing skillName or feedback' });
   }
@@ -13,9 +13,48 @@ export default async function handler(req, res) {
   try {
     const timestamp = new Date().toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' }).replace(/\//g, '-');
     const message = {
-      msg_type: 'text',
-      content: JSON.stringify({
-        text: `📢 新反馈\n\nSkill: ${skillName}\n反馈: ${feedback.trim()}\n时间: ${timestamp}`
+      msg_type: 'interactive',
+      card: JSON.stringify({
+        config: { wide_screen_mode: true },
+        elements: [
+          {
+            tag: 'div',
+            text: { tag: 'lark_md', content: '🔴 <b>新反馈</b>', text_align: 'left' }
+          },
+          {
+            tag: 'table',
+            columns: [
+              { tag: 'td', width: '120px', align: 'left', short: true },
+              { tag: 'td', width: 'auto', align: 'left', short: false }
+            ],
+            rows: [
+              {
+                cells: [
+                  { tag: 'td', align: 'left', text: { tag: 'lark_md', content: '**Skill**' } },
+                  { tag: 'td', align: 'left', text: { tag: 'lark_md', content: skillName } }
+                ]
+              },
+              {
+                cells: [
+                  { tag: 'td', align: 'left', text: { tag: 'lark_md', content: '**创建人**' } },
+                  { tag: 'td', align: 'left', text: { tag: 'lark_md', content: author || '-' } }
+                ]
+              },
+              {
+                cells: [
+                  { tag: 'td', align: 'left', text: { tag: 'lark_md', content: '**反馈**' } },
+                  { tag: 'td', align: 'left', text: { tag: 'lark_md', content: feedback.trim() } }
+                ]
+              },
+              {
+                cells: [
+                  { tag: 'td', align: 'left', text: { tag: 'lark_md', content: '**时间**' } },
+                  { tag: 'td', align: 'left', text: { tag: 'lark_md', content: timestamp } }
+                ]
+              }
+            ]
+          }
+        ]
       })
     };
 
