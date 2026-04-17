@@ -1291,9 +1291,8 @@
                 return;
             }
 
-            const btn = document.getElementById('feedbackSubmit');
-            btn.disabled = true;
-            btn.textContent = '提交中...';
+            // Close modal immediately, send in background
+            closeModal();
 
             fetch('/api/feedback', {
                 method: 'POST',
@@ -1306,22 +1305,10 @@
                     })(),
                     feedback: feedback
                 })
-            }).then(r => r.json()).then(data => {
-                if (data.success) {
-                    showFeedbackResult('反馈已收到，感谢！', 'success');
-                    setTimeout(closeModal, 1500);
-                } else {
-                    showFeedbackResult(data.error || '提交失败，请重试', 'error');
-                }
-            }).catch(() => {
-                showFeedbackResult('提交失败，请重试', 'error');
-            }).finally(() => {
-                btn.disabled = false;
-                btn.textContent = '提交反馈';
-            });
+            }).catch(() => {}); // Silent fail
         }
-
-        function showFeedbackResult(msg, type) {
+                }
+            function showFeedbackResult(msg, type) {
             const el = document.getElementById('feedbackResult');
             el.textContent = msg;
             el.className = 'feedback-result ' + type;
