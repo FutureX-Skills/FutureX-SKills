@@ -1366,6 +1366,14 @@
                     pill.classList.add('active');
                     currentFilter = pill.dataset.filter;
                     renderSkills();
+
+                    // Auto scroll to skills grid when filter changes
+                    const builtinSection = document.getElementById('builtin');
+                    if (builtinSection) {
+                        const navHeight = 60;
+                        const targetY = builtinSection.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+                        window.scrollTo({ top: targetY, behavior: 'smooth' });
+                    }
                 });
             });
 
