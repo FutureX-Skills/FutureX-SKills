@@ -1,4 +1,4 @@
-const WEBHOOK_URL = 'https://open.feishu.cn/open-apis/bot/v2/hook/4122b243-7ec9-4555-b3d1-78a7a1050b12';
+const WEBHOOK_URL = 'https://open.feishu.cn/open-apis/bot/v2/hook/ddb5e757-2a4b-486d-86a9-37a4d73a617a';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
