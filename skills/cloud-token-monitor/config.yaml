@@ -1,0 +1,66 @@
+# Cloud Token Monitor 配置文件
+
+feishu:
+  webhook_url: "https://open.feishu.cn/open-apis/bot/v2/hook/xxx"
+  
+providers:
+  aliyun:
+    enabled: false
+    api_key: "${ALIYUN_API_KEY}"
+    
+  tencent:
+    enabled: false
+    secret_id: "${TENCENT_SECRET_ID}"
+    secret_key: "${TENCENT_SECRET_KEY}"
+    
+  huawei:
+    enabled: false
+    access_key: "${HUAWEI_ACCESS_KEY}"
+    secret_key: "${HUAWEI_SECRET_KEY}"
+    
+  baidu:
+    enabled: false
+    api_key: "${BAIDU_API_KEY}"
+    secret_key: "${BAIDU_SECRET_KEY}"
+    
+  volcengine:
+    enabled: false
+    api_key: "${VOLCENGINE_API_KEY}"
+    
+  aws:
+    enabled: false
+    access_key_id: "${AWS_ACCESS_KEY_ID}"
+    secret_access_key: "${AWS_SECRET_ACCESS_KEY}"
+    region: "${AWS_REGION:-us-east-1}"
+    
+  azure:
+    enabled: false
+    endpoint: "${AZURE_OPENAI_ENDPOINT}"
+    api_key: "${AZURE_OPENAI_API_KEY}"
+    
+  gcp:
+    enabled: false
+    credentials_path: "${GOOGLE_APPLICATION_CREDENTIALS}"
+    
+  google_ai:
+    enabled: false
+    api_key: "${GOOGLE_AI_API_KEY}"
+    
+  openai:
+    enabled: false
+    api_key: "${OPENAI_API_KEY}"
+    
+  anthropic:
+    enabled: false
+    api_key: "${ANTHROPIC_API_KEY}"
+
+# 报告设置
+report:
+  # 默认输出方式: feishu, console
+  default_output: "console"
+  # 图表设置
+  chart:
+    enabled: true
+    width: 12
+    height: 6
+    dpi: 150

@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "id": "36kr-rss",
+      "type": "rss",
+      "name": "36氪",
+      "url": "https://36kr.com/feed",
+      "enabled": true,
+      "priority": false,
+      "topics": ["funding", "frontier-tech", "llm", "ai-agent", "oss-tools", "compute-chip"],
+      "note": "36kr RSS feed"
+    }
+  ]
+}
