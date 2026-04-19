@@ -2,7 +2,7 @@
 # FutureX Skills 一键安装全部 Skills 脚本
 # Usage: curl -fsSL https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/install.sh | bash
 
-AGENTS_DIR="${AGENTS_DIR:-$HOME/.agents/skills}"
+AGENTS_DIR="${AGENTS_DIR:-$HOME/.claude/skills}"
 
 install_from_path() {
     local REPO_PATH="$1"    # e.g. "天际团队SKills库/研报助手"
