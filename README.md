@@ -16,12 +16,6 @@
 
 ## 🚀 如何安装
 
-### 一键安装全部 Skills
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/install.sh | bash
-```
-
 ### 安装单个 Skill
 
 每个 Skill 目录下都有独立的 `README.md`，其中包含该 Skill 的详细介绍和**一键安装命令**。
