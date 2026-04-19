@@ -19,7 +19,7 @@
 ### 一键安装全部 Skills
 
 ```bash
-git clone https://github.com/FutureX-Skills/FutureX-SKills.git ~/.openclaw/workspace/skills/
+curl -fsSL https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/install.sh | bash
 ```
 
 ### 安装单个 Skill
