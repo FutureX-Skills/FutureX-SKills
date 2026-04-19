@@ -16,6 +16,12 @@
 
 ## 🚀 如何安装
 
+### 一键安装全部 Skills
+
+\`\`\`bash
+git clone https://github.com/FutureX-Skills/FutureX-SKills.git ~/.openclaw/workspace/skills/
+\`\`\`
+
 ### 安装单个 Skill
 
 每个 Skill 目录下都有独立的 `README.md`，其中包含该 Skill 的详细介绍和**一键安装命令**。
@@ -155,3 +161,5 @@ futurex-skills/
 📧 capper@futurexcapital.com
 
 *Built for FutureX Team · Open for Everyone*
+
+
