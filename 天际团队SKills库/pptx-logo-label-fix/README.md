@@ -67,6 +67,20 @@ Step 5: 重建 PPTX，验证完整性
 
 ---
 
+## 一键安装
+
+```bash
+# 克隆 / 更新技能到本地 skills 目录
+cd ~/.openclaw/workspace/FutureX-SKills
+git pull origin main
+cp -r 天际团队SKills库/pptx-logo-label-fix ~/.openclaw/workspace/skills/
+
+# 或一步到位（已有仓库）
+cd ~/.openclaw/workspace/FutureX-SKills && git pull && cp -r 天际团队SKills库/pptx-logo-label-fix ~/.openclaw/workspace/skills/
+```
+
+---
+
 ## 使用方式
 
 直接发送 PPTX 文件，描述要修复的问题，Agent 自动完成全流程。
