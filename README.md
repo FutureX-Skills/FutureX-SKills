@@ -29,8 +29,9 @@
 | 生成投研报告、尽调报告 | `研报助手`、`硅谷季度报告`、`立项报告`、`PIB投研搜索` |
 | 社交媒体内容创作 | `社媒营销`、`视频标题大师`、`LinkedIn内容助手`、`AI-VC推文助手` |
 | 播客/内容生产 | `播客后期助手`、`公众号排版助手`、`AI内容写作助手` |
-| 投资业务提效 | `投资-Memo`、`VC创始人会面准备`、`会议纪要整理助手`、`PE募资追踪器` |
-| 运营与合规 | `费用报销合规检查`、`事项提醒`、`云Token监控`、`TODO任务追踪` |
+| 投资业务提效 | `投资-Memo`、`VC创始人会面准备`、`会议纪要整理助手`、`PE募资追踪器`、`vcpe-fundraising-tracker` |
+| 活动与情报追踪 | `sg-luma-events`、`PE募资追踪器`、`vcpe-fundraising-tracker` |
+| 运营与合规 | `费用报销合规检查`、`事项提醒`、`云Token监控`、`TODO任务追踪`、`pptx-logo-label-fix` |
 | 外部精选工具 | `qiaomu-markdown-proxy`、`李继刚skills/`、`43-Agent-skills/` |
 
 ---
@@ -136,7 +137,10 @@ futurex-skills/
     ├── 费用报销合规检查           # 收据与报销单交叉核对
     ├── 金融网页构建器             # Goldman Sachs 风格 Web Artifacts 构建
     ├── TODO任务追踪             # 持久化 TODO.md 任务清单
-    └── AI-VC推文助手            # VC 风格 Twitter/X 帖子生成
+    ├── AI-VC推文助手            # VC 风格 Twitter/X 帖子生成
+    ├── pptx-logo-label-fix      # 自动修复 PPTX 中公司 Logo 与文字标签错位
+    ├── sg-luma-events           # 新加坡 Luma 活动追踪（Family Office/AI/募资/大厂）
+    └── vcpe-fundraising-tracker # 全球 VC/PE 募资动态追踪（多源新闻聚合）
 ```
 
 ---
