@@ -66,6 +66,7 @@
 | **43-Agent-skills** | [43COLLEGE/43-Agent-skills](https://github.com/43COLLEGE/43-Agent-skills) | 10个实用 Agent Skills（飞书助手、浏览器自动化、视频创作等） |
 | **qiaomu-markdown-proxy** | [joeseesun/qiaomu-markdown-proxy](https://github.com/joeseesun/qiaomu-markdown-proxy) | URL → Markdown 转换（微信公众号/飞书/PDF/YouTube） |
 | **skill-creator** | [anthropics/skills](https://github.com/anthropics/skills) | Anthropic 官方 Skill 构建工具（分析器/比较器/评分器） |
+| **ian-xiaohei-illustrations** | [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations) | 「小黑」手绘怪诞风中文文章正文配图（16:9 / shot list） |
 
 > 收录标准：功能明确、维护活跃、与 AI/VC 业务高度相关。
 
@@ -106,10 +107,15 @@ futurex-skills/
 │   ├── qiaomu-markdown-proxy  # 来源：[joeseesun/qiaomu-markdown-proxy](https://github.com/joeseesun/qiaomu-markdown-proxy)
 │   │   └── SKILL.md                 # URL → Markdown（微信公众号/飞书/PDF/YouTube等）
 │   │
-│   └── skill-creator           # 来源：[anthropics/skills](https://github.com/anthropics/skills)
-│       ├── agents/                   # Analyzer / Comparator / Grader
-│       ├── scripts/                  # validate / package / run_eval 等
-│       └── eval-viewer/              # 评估可视化工具
+│   ├── skill-creator           # 来源：[anthropics/skills](https://github.com/anthropics/skills)
+│   │   ├── agents/                   # Analyzer / Comparator / Grader
+│   │   ├── scripts/                  # validate / package / run_eval 等
+│   │   └── eval-viewer/              # 评估可视化工具
+│   │
+│   └── ian-xiaohei-illustrations  # 来源：[helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)
+│       ├── SKILL.md                  # 「小黑」手绘怪诞风中文正文配图
+│       ├── references/               # 风格DNA / 小黑IP / 构图 / 提示词模板 / QA
+│       └── assets/examples/          # 风格校准示例图
 │
 └── 天际团队SKills库/        # 天际资本团队自建 Skills（26个）
     ├── 研报助手                  # MoE 多智能体调度中心，生成投行级尽调报告
