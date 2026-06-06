@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="${FUTUREX_VC_REPO:-CharlesWu17/futurex-vc-skills}"
+REPO="${FUTUREX_VC_REPO:-FutureX-Skills/FutureX-SKills}"
 REF="${FUTUREX_VC_REF:-main}"
-SKILL_PATH="${FUTUREX_VC_SKILL_PATH:-codex-skills/futurex-vc}"
+SKILL_PATH="${FUTUREX_VC_SKILL_PATH:-外部精选Skills/futurex-vc-skills/codex-skills/futurex-vc}"
 SKILL_NAME="${FUTUREX_VC_SKILL_NAME:-futurex-vc}"
 CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
 DEST_ROOT="$CODEX_HOME/skills"
@@ -44,7 +44,7 @@ if [ -d "$DEST" ]; then
     say "FutureX VC skill is already installed at $DEST"
     say "Restart Codex if you just installed it."
     say "To reinstall or update, run:"
-    say "curl -fsSL https://raw.githubusercontent.com/${REPO}/main/install.sh | FORCE=1 bash"
+    say "curl -fsSL https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/install.sh | FORCE=1 bash"
     exit 0
   fi
 

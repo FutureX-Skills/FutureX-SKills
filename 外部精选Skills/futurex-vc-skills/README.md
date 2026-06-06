@@ -19,22 +19,22 @@
 使用 Bash 一键安装：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/CharlesWu17/futurex-vc-skills/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/install.sh | bash
 ```
 
 如需覆盖重装或更新：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/CharlesWu17/futurex-vc-skills/main/install.sh | FORCE=1 bash
+curl -fsSL https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/install.sh | FORCE=1 bash
 ```
 
-Windows PowerShell 也可以使用官方 installer：
+Windows PowerShell 也可以使用 Codex installer：
 
 ```powershell
 & "$env:USERPROFILE\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" `
   "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" `
-  --repo CharlesWu17/futurex-vc-skills `
-  --path codex-skills/futurex-vc
+  --repo FutureX-Skills/FutureX-SKills `
+  --path 外部精选Skills/futurex-vc-skills/codex-skills/futurex-vc
 ```
 
 安装后重启 Codex。之后可以直接说“用 `$futurex-vc` 做 BP 初筛 / Claim 核验 / IC memo”，也可以让 Codex 根据任务自动触发。
