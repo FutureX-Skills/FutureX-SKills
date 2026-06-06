@@ -1,0 +1,7 @@
+interface:
+  display_name: "FutureX VC"
+  short_description: "Evidence-led VC research workflows for startup screening, diligence, and IC memos."
+  default_prompt: "Use $futurex-vc to screen this startup deck and produce a Chinese evidence-labeled investment research output."
+
+policy:
+  allow_implicit_invocation: true

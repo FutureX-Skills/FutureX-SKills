@@ -1,0 +1,27 @@
+# Sensitive source materials
+data/*
+!data/.gitkeep
+
+# Generated outputs
+outputs/*
+!outputs/.gitkeep
+
+# Local files
+.DS_Store
+desktop.ini
+*.log
+
+# Confidential documents
+*.pdf
+*.pptx
+*.docx
+*.xlsx
+*.csv
+*.json
+
+# Secrets and local credentials
+.env
+*.env
+secrets.*
+*_secret*
+*_credentials*

@@ -67,6 +67,7 @@
 | **qiaomu-markdown-proxy** | [joeseesun/qiaomu-markdown-proxy](https://github.com/joeseesun/qiaomu-markdown-proxy) | URL → Markdown 转换（微信公众号/飞书/PDF/YouTube） |
 | **skill-creator** | [anthropics/skills](https://github.com/anthropics/skills) | Anthropic 官方 Skill 构建工具（分析器/比较器/评分器） |
 | **ian-xiaohei-illustrations** | [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations) | 「小黑」手绘怪诞风中文文章正文配图（16:9 / shot list） |
+| **futurex-vc-skills** | 外部VC | 10个 VC 投研 Agent 工作流（BP初筛/Claim核验/赛道图谱/技术尽调/IC memo 等），证据导向 |
 
 > 收录标准：功能明确、维护活跃、与 AI/VC 业务高度相关。
 
@@ -112,10 +113,15 @@ futurex-skills/
 │   │   ├── scripts/                  # validate / package / run_eval 等
 │   │   └── eval-viewer/              # 评估可视化工具
 │   │
-│   └── ian-xiaohei-illustrations  # 来源：[helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)
-│       ├── SKILL.md                  # 「小黑」手绘怪诞风中文正文配图
-│       ├── references/               # 风格DNA / 小黑IP / 构图 / 提示词模板 / QA
-│       └── assets/examples/          # 风格校准示例图
+│   ├── ian-xiaohei-illustrations  # 来源：[helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)
+│   │   ├── SKILL.md                  # 「小黑」手绘怪诞风中文正文配图
+│   │   └── references/               # 风格DNA / 小黑IP / 构图 / 提示词模板 / QA
+│   │
+│   └── futurex-vc-skills        # 来源：外部VC
+│       ├── AGENTS.md                 # VC 投研 Agent 总控规则（证据分级/保密）
+│       ├── skills/                   # 10个投研工作流（BP初筛/Claim核验/赛道图谱/技术尽调/IC memo…）
+│       ├── tasks/                    # 7个可直接执行的任务模板
+│       └── codex-skills/futurex-vc/  # 打包好的 Codex Skill（入口 SKILL.md）
 │
 └── 天际团队SKills库/        # 天际资本团队自建 Skills（26个）
     ├── 研报助手                  # MoE 多智能体调度中心，生成投行级尽调报告
