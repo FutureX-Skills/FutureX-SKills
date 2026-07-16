@@ -28,7 +28,7 @@
 |---------|------------|
 | 生成投研报告、尽调报告 | `研报助手`、`硅谷季度报告`、`立项报告`、`PIB投研搜索` |
 | 社交媒体内容创作 | `社媒营销`、`视频标题大师`、`LinkedIn内容助手`、`AI-VC推文助手` |
-| 播客/内容生产 | `播客后期助手`、`公众号排版助手`、`AI内容写作助手` |
+| 播客/内容生产 | `播客后期助手`、`FutureX公众号长文写作`、`FutureX创意排版`、`公众号排版助手`、`AI内容写作助手` |
 | 投资业务提效 | `投资-Memo`、`VC创始人会面准备`、`会议纪要整理助手`、`PE募资追踪器`、`vcpe-fundraising-tracker` |
 | 活动与情报追踪 | `sg-luma-events`、`PE募资追踪器`、`vcpe-fundraising-tracker` |
 | 运营与合规 | `费用报销合规检查`、`事项提醒`、`云Token监控`、`TODO任务追踪`、`pptx-logo-label-fix` |
@@ -130,7 +130,9 @@ futurex-skills/
     ├── 社媒营销                  # LinkedIn/TikTok/Meta/YouTube/X 多平台内容
     ├── 社媒内容处理              # 图片水印/文字标注/视频拼接/尺寸适配
     ├── AI内容写作助手            # AI 行业热点深度长文（5000字+Word）
+    ├── futurex-writer             # 天际资本官方公众号长文写作（选题判断 + 四层自检）
     ├── 公众号排版助手             # 微信公众号 DOCX 排版（8套配色+封面图自动配色）
+    ├── fx-wechat-formatter        # 微信公众号「电表」杂志化创意排版（4套配色）
     ├── LinkedIn内容助手          # LinkedIn 短帖子+长文章生成
     ├── 播客后期助手              # 双语播客后期（文字稿→多平台适配内容）
     ├── 投资-Memo                 # VC 投资备忘录/Deal Memo 撰写
@@ -171,5 +173,4 @@ futurex-skills/
 📧 capper@futurexcapital.com
 
 *Built for FutureX Team · Open for Everyone*
-
 

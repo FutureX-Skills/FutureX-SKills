@@ -29,9 +29,16 @@ install_from_path() {
 }
 
 echo "📦 安装天际团队 Skills..."
-for skill in "AI-VC推文助手" "AI内容写作助手" "LinkedIn内容助手" "PE募资追踪器" "PIB投研搜索" "TODO任务追踪" "VC创始人会面准备" "事项提醒" "云Token监控" "会议纪要整理助手" "公众号排版助手" "多媒体处理助手" "小红书自动发布" "投资-Memo" "播客后期助手" "旅行规划助手" "研报助手" "硅谷季度报告" "社媒内容处理" "社媒营销" "立项报告" "视频标题大师" "语音合成助手" "费用报销合规检查" "金融网页构建器" "项目立项投资报告"; do
+for skill in "AI-VC推文助手" "AI内容写作助手" "LinkedIn内容助手" "PE募资追踪器" "PIB投研搜索" "TODO任务追踪" "VC创始人会面准备" "事项提醒" "云Token监控" "会议纪要整理助手" "公众号排版助手" "多媒体处理助手" "小红书自动发布" "投资-Memo" "播客后期助手" "旅行规划助手" "研报助手" "硅谷季度报告" "社媒内容处理" "社媒营销" "立项报告" "视频标题大师" "语音合成助手" "费用报销合规检查" "金融网页构建器" "项目立项投资报告" "futurex-writer" "fx-wechat-formatter"; do
     install_from_path "天际团队SKills库/$skill" "$skill"
 done
+
+# fx-wechat-formatter 包含 DOCX 构建脚本，需随 Skill 一并安装。
+FX_FORMATTER_DIR="$AGENTS_DIR/fx-wechat-formatter"
+if [ -f "$FX_FORMATTER_DIR/SKILL.md" ]; then
+    mkdir -p "$FX_FORMATTER_DIR/scripts"
+    curl -fsSL "https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/fx-wechat-formatter/scripts/build_docx.js" -o "$FX_FORMATTER_DIR/scripts/build_docx.js"
+fi
 
 echo ""
 echo "📦 安装 43-Agent-skills..."
