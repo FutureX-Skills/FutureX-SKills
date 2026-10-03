@@ -1,0 +1,1241 @@
+{
+  "version": 1,
+  "generatedAt": null,
+  "skills": [
+    {
+      "id": "研报助手",
+      "name": "研报助手",
+      "summary": "FutureX Capital 多智能体调度中心（MoE Orchestrator）",
+      "detail": "多智能体调度中心，生成投行级尽调报告，支持一键安装",
+      "category": "投研",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/研报助手",
+      "skillPath": "天际团队SKills库/研报助手/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/研报助手",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/研报助手/install.sh\" | bash",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "PIB投研搜索",
+      "name": "PIB投研搜索",
+      "summary": "从公开信息生成私募公司的 VC 风格投资备忘录",
+      "detail": "PIB搜索工具，支持最新动态优先（<1年数据），包含投资亮点、运营/财务数据、竞争格局、上行潜力等模块",
+      "category": "投研",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/PIB投研搜索",
+      "skillPath": "天际团队SKills库/PIB投研搜索/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/PIB投研搜索",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/PIB投研搜索/install.sh\" | bash",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "投资-Memo",
+      "name": "投资-Memo",
+      "summary": "VC 投资备忘录/Deal Memo 撰写工具",
+      "detail": "将原始笔记一键转化为专业的合伙人级投资报告",
+      "category": "投研",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/投资-Memo",
+      "skillPath": "天际团队SKills库/投资-Memo/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/投资-Memo",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/投资-Memo/install.sh\" | bash",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "立项报告",
+      "name": "立项报告",
+      "summary": "中文 VC 立项报告撰写工具",
+      "detail": "将原始笔记或零散信息整理成专业的内部立项报告",
+      "category": "投研",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/立项报告",
+      "skillPath": "天际团队SKills库/立项报告/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/立项报告",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/立项报告/install.sh\" | bash",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "项目立项投资报告",
+      "name": "项目立项投资报告",
+      "summary": "按标准立项报告框架生成完整投资立项报告",
+      "detail": "适用于立项报告、投资报告、项目过会材料、投资决策支持文档",
+      "category": "投研",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/项目立项投资报告",
+      "skillPath": "天际团队SKills库/项目立项投资报告/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/项目立项投资报告",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/项目立项投资报告/install.sh\" | bash",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "硅谷季度报告",
+      "name": "硅谷季度报告",
+      "summary": "深度 VC 赛道趋势分析报告生成工具",
+      "detail": "追踪过去三个月科技/AI赛道的投资变化、范式转移与产业动态，适用于投资委员会报告、LP更新",
+      "category": "投研",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/硅谷季度报告",
+      "skillPath": "天际团队SKills库/硅谷季度报告/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/硅谷季度报告",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/硅谷季度报告/install.sh\" | bash",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "PE募资追踪器",
+      "name": "PE募资追踪器",
+      "summary": "全球一级市场股权投资募资动态追踪工具",
+      "detail": "重点关注中国和美国市场，自动生成LP情报报告",
+      "category": "投研",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/PE募资追踪器",
+      "skillPath": "天际团队SKills库/PE募资追踪器/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/PE募资追踪器",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/PE募资追踪器/install.sh\" | bash",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "vcpe-fundraising-tracker",
+      "name": "vcpe-fundraising-tracker",
+      "summary": "全球 VC/PE 募资动态追踪工具",
+      "detail": "多数据源聚合（PitchBook/Crunchbase/TechCrunch/VentureBeat/PE Hub/投中网/36氪），支持最新新闻、周报生成、特定机构追踪、地区/行业筛选",
+      "category": "投研",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/vcpe-fundraising-tracker",
+      "skillPath": "天际团队SKills库/vcpe-fundraising-tracker/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/vcpe-fundraising-tracker",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/vcpe-fundraising-tracker\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/vcpe-fundraising-tracker/SKILL.md\" -o \"$HOME/.agents/skills/vcpe-fundraising-tracker/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "视频标题大师",
+      "name": "视频标题大师",
+      "summary": "短视频封面标题与简介生成工具",
+      "detail": "支持抖音、视频号、小红书等平台，25个多风格封面标题",
+      "category": "内容创作",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/视频标题大师",
+      "skillPath": "天际团队SKills库/视频标题大师/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/视频标题大师",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/视频标题大师/install.sh\" | bash",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "AI内容写作助手",
+      "name": "AI内容写作助手",
+      "summary": "AI行业热点深度长文工具",
+      "detail": "支持5000字以上中文长文+Word文档输出，触发词：写AI热点文章、AI日报/周报/深度报告",
+      "category": "内容创作",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/AI内容写作助手",
+      "skillPath": "天际团队SKills库/AI内容写作助手/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/AI内容写作助手",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/AI内容写作助手/install.sh\" | bash",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "futurex-writer",
+      "name": "FutureX公众号长文写作",
+      "summary": "天际资本官方公众号长文写作工具",
+      "detail": "将新闻、报告、访谈或零散素材写成天际资本风格的公众号长文，内置选题判断、机构口径和四层自检流程",
+      "category": "内容创作",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/futurex-writer",
+      "skillPath": "天际团队SKills库/futurex-writer/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/futurex-writer",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/futurex-writer/install.sh\" | bash",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "公众号排版助手",
+      "name": "微信公众号Markdown排版助手",
+      "summary": "Markdown → 公众号 docx 排版工具",
+      "detail": "可以把Markdown文档内容排版成可以直接导入公众号的docx文档",
+      "category": "内容创作",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/公众号排版助手",
+      "skillPath": "天际团队SKills库/公众号排版助手/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/公众号排版助手",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/公众号排版助手/install.sh\" | bash",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "fx-wechat-formatter",
+      "name": "FutureX创意排版",
+      "summary": "微信公众号「电表」杂志化排版工具",
+      "detail": "将 Markdown 转为可直接粘贴至微信公众号编辑器的 docx，提供琥珀、青金、炭橙、雾青四套配色与读数、金句、CTA 等组件",
+      "category": "内容创作",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/fx-wechat-formatter",
+      "skillPath": "天际团队SKills库/fx-wechat-formatter/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/fx-wechat-formatter",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/fx-wechat-formatter/install.sh\" | bash",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "AI-VC推文助手",
+      "name": "AI-VC推文助手",
+      "summary": "VC Twitter/X 帖子生成工具",
+      "detail": "专为AI VC投资人设计，将投研洞察转化为高互动推文",
+      "category": "内容创作",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/AI-VC推文助手",
+      "skillPath": "天际团队SKills库/AI-VC推文助手/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/AI-VC推文助手",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/AI-VC推文助手/install.sh\" | bash",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "LinkedIn内容助手",
+      "name": "LinkedIn内容助手",
+      "summary": "LinkedIn 内容生成工具",
+      "detail": "短帖子（150-300词）+长文章（400-800词），中译英专业输出",
+      "category": "内容创作",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/LinkedIn内容助手",
+      "skillPath": "天际团队SKills库/LinkedIn内容助手/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/LinkedIn内容助手",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/LinkedIn内容助手/install.sh\" | bash",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "播客后期助手",
+      "name": "播客后期助手",
+      "summary": "双语播客后期全套工具",
+      "detail": "将原始文字稿转换为多平台适配内容（公众号、小红书、B站、YouTube、TikTok等）",
+      "category": "内容创作",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/播客后期助手",
+      "skillPath": "天际团队SKills库/播客后期助手/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/播客后期助手",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/播客后期助手/install.sh\" | bash",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "旅行规划助手",
+      "name": "旅行规划助手",
+      "summary": "保姆级旅行规划工具",
+      "detail": "分步问询、视觉友好、马蜂窝/小红书爆款攻略整合，输出可截图保存的完整行程方案",
+      "category": "内容创作",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/旅行规划助手",
+      "skillPath": "天际团队SKills库/旅行规划助手/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/旅行规划助手",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/旅行规划助手/install.sh\" | bash",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "金融网页构建器",
+      "name": "金融网页构建器",
+      "summary": "Goldman Sachs 风格 Web Artifacts 构建工具",
+      "detail": "使用React+TypeScript+Tailwind CSS+shadcn/ui创建专业金融分析网页",
+      "category": "内容创作",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/金融网页构建器",
+      "skillPath": "天际团队SKills库/金融网页构建器/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/金融网页构建器",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/金融网页构建器/install.sh\" | bash",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "社媒营销",
+      "name": "社媒营销",
+      "summary": "跨平台社交媒体营销工具",
+      "detail": "Sustainable social media marketing across LinkedIn, TikTok, Meta, YouTube, X",
+      "category": "社媒运营",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/社媒营销",
+      "skillPath": "天际团队SKills库/社媒营销/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/社媒营销",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/社媒营销/install.sh\" | bash",
+      "tags": [
+        "社媒运营"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "社媒内容处理",
+      "name": "社媒内容处理",
+      "summary": "社交媒体图片/视频处理自动化工具",
+      "detail": "图片加水印/文字标注、视频拼接合并、多平台尺寸适配（小红书/Twitter/Instagram等）",
+      "category": "社媒运营",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/社媒内容处理",
+      "skillPath": "天际团队SKills库/社媒内容处理/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/社媒内容处理",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/社媒内容处理/install.sh\" | bash",
+      "tags": [
+        "社媒运营"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "小红书自动发布",
+      "name": "小红书自动发布",
+      "summary": "小红书自动化发布工具",
+      "detail": "基于xiaohongshu-mcp+MCPorter，支持图片上传、标题填写、正文填写、标签设置",
+      "category": "社媒运营",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/小红书自动发布",
+      "skillPath": "天际团队SKills库/小红书自动发布/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/小红书自动发布",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/小红书自动发布/install.sh\" | bash",
+      "tags": [
+        "社媒运营"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "语音合成助手",
+      "name": "语音合成助手",
+      "summary": "Text-to-Speech 多模型工具",
+      "detail": "支持DIA TTS、Kokoro TTS、Chatterbox、Higgs Audio、VibeVoice，适用于产品演示、有声书、播客生成",
+      "category": "社媒运营",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/语音合成助手",
+      "skillPath": "天际团队SKills库/语音合成助手/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/语音合成助手",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/语音合成助手/install.sh\" | bash",
+      "tags": [
+        "社媒运营"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "多媒体处理助手",
+      "name": "多媒体处理助手",
+      "summary": "图片处理+PDF处理工具",
+      "detail": "图片调整大小/裁剪/滤镜/格式转换、PDF文字编辑/图片插入/页面操作/合并拆分/压缩",
+      "category": "社媒运营",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/多媒体处理助手",
+      "skillPath": "天际团队SKills库/多媒体处理助手/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/多媒体处理助手",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/多媒体处理助手/install.sh\" | bash",
+      "tags": [
+        "社媒运营"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "会议纪要整理助手",
+      "name": "会议纪要整理助手",
+      "summary": "录音转结构化会议纪要",
+      "detail": "将录音转文字整理为结构化会议纪要",
+      "category": "效率工具",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/会议纪要整理助手",
+      "skillPath": "天际团队SKills库/会议纪要整理助手/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/会议纪要整理助手",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/会议纪要整理助手/install.sh\" | bash",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "VC创始人会面准备",
+      "name": "VC创始人会面准备",
+      "summary": "创始人会面问题清单生成",
+      "detail": "将公司信息转化为英文、梳理赛道框架、标注关键决策点，生成定制化创始人问题清单",
+      "category": "效率工具",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/VC创始人会面准备",
+      "skillPath": "天际团队SKills库/VC创始人会面准备/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/VC创始人会面准备",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/VC创始人会面准备/install.sh\" | bash",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "云Token监控",
+      "name": "云Token监控",
+      "summary": "多云厂商 Token 消耗监控",
+      "detail": "监控阿里云/腾讯云/华为云/百度云/AWS/Azure/GCP/OpenAI/Anthropic等每日Token消耗，生成可视化图表",
+      "category": "效率工具",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/云Token监控",
+      "skillPath": "天际团队SKills库/云Token监控/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/云Token监控",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/云Token监控/install.sh\" | bash",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "费用报销合规检查",
+      "name": "费用报销合规检查",
+      "summary": "收据与报销单交叉核对工具",
+      "detail": "报销单合规审查，标记差异和缺失项，生成合规审查摘要供人工审批",
+      "category": "效率工具",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/费用报销合规检查",
+      "skillPath": "天际团队SKills库/费用报销合规检查/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/费用报销合规检查",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/费用报销合规检查/install.sh\" | bash",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "pptx-logo-label-fix",
+      "name": "pptx-logo-label-fix",
+      "summary": "自动修复 PPTX 幻灯片中公司 Logo 与文字标签错位问题",
+      "detail": "智能提取Logo、修复错位、补充标签、重新排序，适用于 FutureX 投资组合幻灯片",
+      "category": "效率工具",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/pptx-logo-label-fix",
+      "skillPath": "天际团队SKills库/pptx-logo-label-fix/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/pptx-logo-label-fix",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/pptx-logo-label-fix\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/pptx-logo-label-fix/SKILL.md\" -o \"$HOME/.agents/skills/pptx-logo-label-fix/SKILL.md\"",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "sg-luma-events",
+      "name": "sg-luma-events",
+      "summary": "新加坡 Luma 活动追踪工具",
+      "detail": "追踪 lu.ma 上 Family Office、募资、AI、科技、VC/PE 及科技大厂相关活动，生成结构化周报，可选飞书自动推送",
+      "category": "效率工具",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/sg-luma-events",
+      "skillPath": "天际团队SKills库/sg-luma-events/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/sg-luma-events",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/sg-luma-events\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/sg-luma-events/SKILL.md\" -o \"$HOME/.agents/skills/sg-luma-events/SKILL.md\"",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-invest",
+      "name": "ljg-invest",
+      "summary": "投资分析报告",
+      "detail": "投资分析报告生成",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-invest",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-invest/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-invest",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-invest\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-invest/SKILL.md\" -o \"$HOME/.agents/skills/ljg-invest/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-learn",
+      "name": "ljg-learn",
+      "summary": "概念解剖（8维度）",
+      "detail": "概念解剖（8维度）",
+      "category": "内容创作",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-learn",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-learn/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-learn",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-learn\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-learn/SKILL.md\" -o \"$HOME/.agents/skills/ljg-learn/SKILL.md\"",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-paper",
+      "name": "ljg-paper",
+      "summary": "论文阅读（普通人版）",
+      "detail": "论文阅读（普通人版）",
+      "category": "内容创作",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-paper",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-paper/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-paper",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-paper\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-paper/SKILL.md\" -o \"$HOME/.agents/skills/ljg-paper/SKILL.md\"",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-paper-river",
+      "name": "ljg-paper-river",
+      "summary": "论文溯源（问题演化史）",
+      "detail": "论文溯源（问题演化史）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-paper-river",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-paper-river/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-paper-river",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-paper-river\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-paper-river/SKILL.md\" -o \"$HOME/.agents/skills/ljg-paper-river/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-plain",
+      "name": "ljg-plain",
+      "summary": "说人话（12岁能懂）",
+      "detail": "说人话（12岁能懂）",
+      "category": "内容创作",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-plain",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-plain/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-plain",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-plain\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-plain/SKILL.md\" -o \"$HOME/.agents/skills/ljg-plain/SKILL.md\"",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-rank",
+      "name": "ljg-rank",
+      "summary": "降秩分析",
+      "detail": "降秩分析",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-rank",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-rank/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-rank",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-rank\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-rank/SKILL.md\" -o \"$HOME/.agents/skills/ljg-rank/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-relationship",
+      "name": "ljg-relationship",
+      "summary": "关系分析",
+      "detail": "关系分析",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-relationship",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-relationship/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-relationship",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-relationship\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-relationship/SKILL.md\" -o \"$HOME/.agents/skills/ljg-relationship/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-roundtable",
+      "name": "ljg-roundtable",
+      "summary": "圆桌辩论框架",
+      "detail": "圆桌辩论框架",
+      "category": "内容创作",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-roundtable",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-roundtable/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-roundtable",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-roundtable\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-roundtable/SKILL.md\" -o \"$HOME/.agents/skills/ljg-roundtable/SKILL.md\"",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-think",
+      "name": "ljg-think",
+      "summary": "追本之箭（纵向深钻）",
+      "detail": "追本之箭（纵向深钻）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-think",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-think/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-think",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-think\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-think/SKILL.md\" -o \"$HOME/.agents/skills/ljg-think/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-travel",
+      "name": "ljg-travel",
+      "summary": "深度旅行研究",
+      "detail": "深度旅行研究",
+      "category": "内容创作",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-travel",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-travel/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-travel",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-travel\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-travel/SKILL.md\" -o \"$HOME/.agents/skills/ljg-travel/SKILL.md\"",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-word",
+      "name": "ljg-word",
+      "summary": "英语单词深度掌握",
+      "detail": "英语单词深度掌握",
+      "category": "内容创作",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-word",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-word/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-word",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-word\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-word/SKILL.md\" -o \"$HOME/.agents/skills/ljg-word/SKILL.md\"",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-writes",
+      "name": "ljg-writes",
+      "summary": "写作引擎",
+      "detail": "写作引擎",
+      "category": "内容创作",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-writes",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-writes/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-writes",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-writes\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-writes/SKILL.md\" -o \"$HOME/.agents/skills/ljg-writes/SKILL.md\"",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ljg-card",
+      "name": "ljg-card",
+      "summary": "PNG 海报/信息图",
+      "detail": "PNG 海报/信息图",
+      "category": "内容创作",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/李继刚skills/ljg-card",
+      "skillPath": "外部精选Skills/李继刚skills/ljg-card/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/李继刚skills/ljg-card",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ljg-card\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/李继刚skills/ljg-card/SKILL.md\" -o \"$HOME/.agents/skills/ljg-card/SKILL.md\"",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "chat-archiver",
+      "name": "聊天记录归档",
+      "summary": "聊天记录归档",
+      "detail": "聊天记录归档",
+      "category": "效率工具",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/43-Agent-skills/chat-archiver",
+      "skillPath": "外部精选Skills/43-Agent-skills/chat-archiver/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/chat-archiver",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/chat-archiver\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/43-Agent-skills/chat-archiver/SKILL.md\" -o \"$HOME/.agents/skills/chat-archiver/SKILL.md\"",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "feishu-assistant",
+      "name": "飞书助手",
+      "summary": "飞书助手",
+      "detail": "飞书助手",
+      "category": "效率工具",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/43-Agent-skills/feishu-assistant",
+      "skillPath": "外部精选Skills/43-Agent-skills/feishu-assistant/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/feishu-assistant",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/feishu-assistant\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/43-Agent-skills/feishu-assistant/SKILL.md\" -o \"$HOME/.agents/skills/feishu-assistant/SKILL.md\"",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "follow-builders",
+      "name": "追踪创业者动态",
+      "summary": "追踪创业者动态",
+      "detail": "追踪创业者动态",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/43-Agent-skills/follow-builders",
+      "skillPath": "外部精选Skills/43-Agent-skills/follow-builders/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/follow-builders",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/follow-builders\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/43-Agent-skills/follow-builders/SKILL.md\" -o \"$HOME/.agents/skills/follow-builders/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "media-transcriber",
+      "name": "媒体转录",
+      "summary": "媒体转录",
+      "detail": "媒体转录",
+      "category": "内容创作",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/43-Agent-skills/media-transcriber",
+      "skillPath": "外部精选Skills/43-Agent-skills/media-transcriber/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/media-transcriber",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/media-transcriber\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/43-Agent-skills/media-transcriber/SKILL.md\" -o \"$HOME/.agents/skills/media-transcriber/SKILL.md\"",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "social-media-scout",
+      "name": "社交媒体情报",
+      "summary": "社交媒体情报",
+      "detail": "社交媒体情报",
+      "category": "社媒运营",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/43-Agent-skills/social-media-scout",
+      "skillPath": "外部精选Skills/43-Agent-skills/social-media-scout/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/social-media-scout",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/social-media-scout\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/43-Agent-skills/social-media-scout/SKILL.md\" -o \"$HOME/.agents/skills/social-media-scout/SKILL.md\"",
+      "tags": [
+        "社媒运营"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "video-creator",
+      "name": "视频创作",
+      "summary": "视频创作",
+      "detail": "视频创作",
+      "category": "社媒运营",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/43-Agent-skills/video-creator",
+      "skillPath": "外部精选Skills/43-Agent-skills/video-creator/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/video-creator",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/video-creator\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/43-Agent-skills/video-creator/SKILL.md\" -o \"$HOME/.agents/skills/video-creator/SKILL.md\"",
+      "tags": [
+        "社媒运营"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "web-browser",
+      "name": "浏览器自动化",
+      "summary": "浏览器自动化",
+      "detail": "浏览器自动化",
+      "category": "效率工具",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/43-Agent-skills/web-browser",
+      "skillPath": "外部精选Skills/43-Agent-skills/web-browser/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/43-Agent-skills/web-browser",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/web-browser\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/43-Agent-skills/web-browser/SKILL.md\" -o \"$HOME/.agents/skills/web-browser/SKILL.md\"",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "qiaomu-markdown-proxy",
+      "name": "qiaomu-markdown-proxy",
+      "summary": "URL → Markdown",
+      "detail": "URL → Markdown",
+      "category": "效率工具",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/qiaomu-markdown-proxy",
+      "skillPath": "外部精选Skills/qiaomu-markdown-proxy/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/qiaomu-markdown-proxy",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/qiaomu-markdown-proxy\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/qiaomu-markdown-proxy/SKILL.md\" -o \"$HOME/.agents/skills/qiaomu-markdown-proxy/SKILL.md\"",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "skill-vetter",
+      "name": "skill-vetter",
+      "summary": "Security-first vetting for Claude Code skills",
+      "detail": "Skill安全审核工具，审计权限、提示注入、供应链风险等",
+      "category": "效率工具",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/Skill-Vetter/skills/skill-vetter",
+      "skillPath": "外部精选Skills/Skill-Vetter/skills/skill-vetter/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/Skill-Vetter/skills/skill-vetter",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/skill-vetter\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/Skill-Vetter/skills/skill-vetter/SKILL.md\" -o \"$HOME/.agents/skills/skill-vetter/SKILL.md\"",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "skill-creator",
+      "name": "skill-creator",
+      "summary": "Anthropic 官方构建工具",
+      "detail": "Anthropic 官方构建工具",
+      "category": "效率工具",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/skill-creator",
+      "skillPath": "外部精选Skills/skill-creator/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/skill-creator",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/skill-creator\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/skill-creator/SKILL.md\" -o \"$HOME/.agents/skills/skill-creator/SKILL.md\"",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "ian-xiaohei-illustrations",
+      "name": "ian-xiaohei-illustrations",
+      "summary": "「小黑」手绘怪诞风中文文章配图",
+      "detail": "理解文章认知锚点后，把判断/流程/隐喻画成 16:9 手绘正文配图，输出 shot list + PNG；纯白底、小黑 IP，作者 Ian（MIT）",
+      "category": "内容创作",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/ian-xiaohei-illustrations",
+      "skillPath": "外部精选Skills/ian-xiaohei-illustrations/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/外部精选Skills/ian-xiaohei-illustrations",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/ian-xiaohei-illustrations\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/ian-xiaohei-illustrations/SKILL.md\" -o \"$HOME/.agents/skills/ian-xiaohei-illustrations/SKILL.md\"",
+      "tags": [
+        "内容创作"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "pitch-deck-screening",
+      "name": "BP初筛",
+      "summary": "Pitch Deck 初筛",
+      "detail": "BP 初筛，输出一页纸结论、风险与追问；收入/估值/市场等未验证数据标「待验证」（外部VC）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/futurex-vc-skills/skills/pitch-deck-screening.md",
+      "skillPath": "外部精选Skills/futurex-vc-skills/skills/pitch-deck-screening.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/blob/main/外部精选Skills/futurex-vc-skills/skills/pitch-deck-screening.md",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/pitch-deck-screening\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/skills/pitch-deck-screening.md\" -o \"$HOME/.agents/skills/pitch-deck-screening/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "claims-verification",
+      "name": "Claim核验",
+      "summary": "公司关键 Claim 核验",
+      "detail": "抽取并核验公司关键 Claim，区分已验证事实/公司自述/第三方报道/待验证（外部VC）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/futurex-vc-skills/skills/claims-verification.md",
+      "skillPath": "外部精选Skills/futurex-vc-skills/skills/claims-verification.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/blob/main/外部精选Skills/futurex-vc-skills/skills/claims-verification.md",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/claims-verification\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/skills/claims-verification.md\" -o \"$HOME/.agents/skills/claims-verification/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "risk-memo",
+      "name": "风险Memo",
+      "summary": "项目风险识别与缓释",
+      "detail": "系统化识别项目风险和缓释动作（外部VC）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/futurex-vc-skills/skills/risk-memo.md",
+      "skillPath": "外部精选Skills/futurex-vc-skills/skills/risk-memo.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/blob/main/外部精选Skills/futurex-vc-skills/skills/risk-memo.md",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/risk-memo\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/skills/risk-memo.md\" -o \"$HOME/.agents/skills/risk-memo/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "market-map",
+      "name": "赛道图谱",
+      "summary": "赛道 Market Map",
+      "detail": "构建赛道图谱、价值链和竞品分层（外部VC）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/futurex-vc-skills/skills/market-map.md",
+      "skillPath": "外部精选Skills/futurex-vc-skills/skills/market-map.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/blob/main/外部精选Skills/futurex-vc-skills/skills/market-map.md",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/market-map\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/skills/market-map.md\" -o \"$HOME/.agents/skills/market-map/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "startup-onepager",
+      "name": "公司One-Pager",
+      "summary": "公司 One-Pager",
+      "detail": "生成投资团队可快速阅读的公司 One-Pager（外部VC）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/futurex-vc-skills/skills/startup-onepager.md",
+      "skillPath": "外部精选Skills/futurex-vc-skills/skills/startup-onepager.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/blob/main/外部精选Skills/futurex-vc-skills/skills/startup-onepager.md",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/startup-onepager\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/skills/startup-onepager.md\" -o \"$HOME/.agents/skills/startup-onepager/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "technical-dd",
+      "name": "技术尽调",
+      "summary": "技术型项目技术 DD",
+      "detail": "面向技术型项目的技术尽职调查（外部VC）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/futurex-vc-skills/skills/technical-dd.md",
+      "skillPath": "外部精选Skills/futurex-vc-skills/skills/technical-dd.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/blob/main/外部精选Skills/futurex-vc-skills/skills/technical-dd.md",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/technical-dd\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/skills/technical-dd.md\" -o \"$HOME/.agents/skills/technical-dd/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "memo-to-ic",
+      "name": "投委会Memo",
+      "summary": "IC Memo 生成",
+      "detail": "将研究材料组织为投委会 memo（外部VC）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/futurex-vc-skills/skills/memo-to-ic.md",
+      "skillPath": "外部精选Skills/futurex-vc-skills/skills/memo-to-ic.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/blob/main/外部精选Skills/futurex-vc-skills/skills/memo-to-ic.md",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/memo-to-ic\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/skills/memo-to-ic.md\" -o \"$HOME/.agents/skills/memo-to-ic/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "product-feedback-analysis",
+      "name": "用户反馈分析",
+      "summary": "PMF 信号提取",
+      "detail": "从用户反馈中提取 PMF 信号（外部VC）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/futurex-vc-skills/skills/product-feedback-analysis.md",
+      "skillPath": "外部精选Skills/futurex-vc-skills/skills/product-feedback-analysis.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/blob/main/外部精选Skills/futurex-vc-skills/skills/product-feedback-analysis.md",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/product-feedback-analysis\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/skills/product-feedback-analysis.md\" -o \"$HOME/.agents/skills/product-feedback-analysis/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "paper-analysis",
+      "name": "论文投资分析",
+      "summary": "论文/白皮书投资含义",
+      "detail": "拆解论文或技术白皮书的投资含义（外部VC）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/futurex-vc-skills/skills/paper-analysis.md",
+      "skillPath": "外部精选Skills/futurex-vc-skills/skills/paper-analysis.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/blob/main/外部精选Skills/futurex-vc-skills/skills/paper-analysis.md",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/paper-analysis\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/skills/paper-analysis.md\" -o \"$HOME/.agents/skills/paper-analysis/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "patent-analysis",
+      "name": "专利分析",
+      "summary": "专利壁垒与风险",
+      "detail": "分析专利保护范围、壁垒和风险（外部VC）",
+      "category": "投研",
+      "source": "curated",
+      "author": "Capper",
+      "repoPath": "外部精选Skills/futurex-vc-skills/skills/patent-analysis.md",
+      "skillPath": "外部精选Skills/futurex-vc-skills/skills/patent-analysis.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/blob/main/外部精选Skills/futurex-vc-skills/skills/patent-analysis.md",
+      "installCommand": "mkdir -p \"$HOME/.agents/skills/patent-analysis\" && curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/外部精选Skills/futurex-vc-skills/skills/patent-analysis.md\" -o \"$HOME/.agents/skills/patent-analysis/SKILL.md\"",
+      "tags": [
+        "投研"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "TODO任务追踪",
+      "name": "TODO任务追踪",
+      "summary": "持久化 TODO 清单管理工具",
+      "detail": "把任务写入项目内 TODO.md，支持新增、完成、查询和持续追踪",
+      "category": "效率工具",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/TODO任务追踪",
+      "skillPath": "天际团队SKills库/TODO任务追踪/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/TODO任务追踪",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/TODO任务追踪/install.sh\" | bash",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    },
+    {
+      "id": "事项提醒",
+      "name": "事项提醒",
+      "summary": "从生日和事项清单生成年度提醒",
+      "detail": "读取 Excel 事项列表并生成飞书日历年度提醒，减少遗漏重要节点",
+      "category": "效率工具",
+      "source": "builtin",
+      "author": "Capper",
+      "repoPath": "天际团队SKills库/事项提醒",
+      "skillPath": "天际团队SKills库/事项提醒/SKILL.md",
+      "url": "https://github.com/FutureX-Skills/FutureX-SKills/tree/main/天际团队SKills库/事项提醒",
+      "installCommand": "curl -fsSL \"https://raw.githubusercontent.com/FutureX-Skills/FutureX-SKills/main/天际团队SKills库/事项提醒/install.sh\" | bash",
+      "tags": [
+        "效率工具"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "updatedAt": null
+    }
+  ]
+}

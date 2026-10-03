@@ -1,13 +1,16 @@
-const WEBHOOK_URL = 'https://open.feishu.cn/open-apis/bot/v2/hook/ddb5e757-2a4b-486d-86a9-37a4d73a617a';
+const WEBHOOK_URL = process.env.FEISHU_FEEDBACK_WEBHOOK;
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { skillName, author, feedback } = req.body;
-  if (!skillName || !feedback) {
+  const { skillName, author, feedback } = req.body || {};
+  if (typeof skillName !== 'string' || typeof feedback !== 'string' || !skillName.trim() || !feedback.trim()) {
     return res.status(400).json({ error: 'Missing skillName or feedback' });
+  }
+  if (!WEBHOOK_URL) {
+    return res.status(503).json({ error: 'Feedback service is not configured' });
   }
 
   try {
@@ -27,7 +30,7 @@ export default async function handler(req, res) {
 
     const data = await response.json();
 
-    if (!response.ok) {
+    if (!response.ok || data.code !== 0) {
       console.error('Webhook error:', data);
       return res.status(500).json({ error: data });
     }

@@ -22,6 +22,8 @@
 
 找到你想安装的 Skill → 进入其目录 → 复制 `README.md` 中的安装指令即可。
 
+网站首页使用根目录的 [`skills.json`](skills.json) 作为 Skill 目录唯一数据源。修改 Skill 清单、链接或安装信息后，请运行 `node scripts/validate-catalog.mjs` 检查目录完整性。
+
 ### 快速导航
 
 | 需求场景 | 推荐 Skills |
@@ -33,6 +35,82 @@
 | 活动与情报追踪 | `sg-luma-events`、`PE募资追踪器`、`vcpe-fundraising-tracker` |
 | 运营与合规 | `费用报销合规检查`、`事项提醒`、`云Token监控`、`TODO任务追踪`、`pptx-logo-label-fix` |
 | 外部精选工具 | `qiaomu-markdown-proxy`、`李继刚skills/`、`43-Agent-skills/` |
+
+<!-- CATALOG:START -->
+## 📚 Skill 清单（由 `skills.json` 生成）
+
+当前目录共 **65** 个 Skills：天际自建 31 个，外部精选 34 个。
+
+| Skill | 分类 | 来源 | 仓库路径 |
+|------|------|------|----------|
+| [研报助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E7%A0%94%E6%8A%A5%E5%8A%A9%E6%89%8B) | 投研 | 天际自建 | `天际团队SKills库/研报助手` |
+| [PIB投研搜索](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/PIB%E6%8A%95%E7%A0%94%E6%90%9C%E7%B4%A2) | 投研 | 天际自建 | `天际团队SKills库/PIB投研搜索` |
+| [投资-Memo](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E6%8A%95%E8%B5%84-Memo) | 投研 | 天际自建 | `天际团队SKills库/投资-Memo` |
+| [立项报告](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E7%AB%8B%E9%A1%B9%E6%8A%A5%E5%91%8A) | 投研 | 天际自建 | `天际团队SKills库/立项报告` |
+| [项目立项投资报告](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E9%A1%B9%E7%9B%AE%E7%AB%8B%E9%A1%B9%E6%8A%95%E8%B5%84%E6%8A%A5%E5%91%8A) | 投研 | 天际自建 | `天际团队SKills库/项目立项投资报告` |
+| [硅谷季度报告](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E7%A1%85%E8%B0%B7%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A) | 投研 | 天际自建 | `天际团队SKills库/硅谷季度报告` |
+| [PE募资追踪器](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/PE%E5%8B%9F%E8%B5%84%E8%BF%BD%E8%B8%AA%E5%99%A8) | 投研 | 天际自建 | `天际团队SKills库/PE募资追踪器` |
+| [vcpe-fundraising-tracker](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/vcpe-fundraising-tracker) | 投研 | 天际自建 | `天际团队SKills库/vcpe-fundraising-tracker` |
+| [视频标题大师](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E8%A7%86%E9%A2%91%E6%A0%87%E9%A2%98%E5%A4%A7%E5%B8%88) | 内容创作 | 天际自建 | `天际团队SKills库/视频标题大师` |
+| [AI内容写作助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/AI%E5%86%85%E5%AE%B9%E5%86%99%E4%BD%9C%E5%8A%A9%E6%89%8B) | 内容创作 | 天际自建 | `天际团队SKills库/AI内容写作助手` |
+| [FutureX公众号长文写作](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/futurex-writer) | 内容创作 | 天际自建 | `天际团队SKills库/futurex-writer` |
+| [微信公众号Markdown排版助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%8E%92%E7%89%88%E5%8A%A9%E6%89%8B) | 内容创作 | 天际自建 | `天际团队SKills库/公众号排版助手` |
+| [FutureX创意排版](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/fx-wechat-formatter) | 内容创作 | 天际自建 | `天际团队SKills库/fx-wechat-formatter` |
+| [AI-VC推文助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/AI-VC%E6%8E%A8%E6%96%87%E5%8A%A9%E6%89%8B) | 内容创作 | 天际自建 | `天际团队SKills库/AI-VC推文助手` |
+| [LinkedIn内容助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/LinkedIn%E5%86%85%E5%AE%B9%E5%8A%A9%E6%89%8B) | 内容创作 | 天际自建 | `天际团队SKills库/LinkedIn内容助手` |
+| [播客后期助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E6%92%AD%E5%AE%A2%E5%90%8E%E6%9C%9F%E5%8A%A9%E6%89%8B) | 内容创作 | 天际自建 | `天际团队SKills库/播客后期助手` |
+| [旅行规划助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E6%97%85%E8%A1%8C%E8%A7%84%E5%88%92%E5%8A%A9%E6%89%8B) | 内容创作 | 天际自建 | `天际团队SKills库/旅行规划助手` |
+| [金融网页构建器](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E9%87%91%E8%9E%8D%E7%BD%91%E9%A1%B5%E6%9E%84%E5%BB%BA%E5%99%A8) | 内容创作 | 天际自建 | `天际团队SKills库/金融网页构建器` |
+| [社媒营销](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E7%A4%BE%E5%AA%92%E8%90%A5%E9%94%80) | 社媒运营 | 天际自建 | `天际团队SKills库/社媒营销` |
+| [社媒内容处理](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E7%A4%BE%E5%AA%92%E5%86%85%E5%AE%B9%E5%A4%84%E7%90%86) | 社媒运营 | 天际自建 | `天际团队SKills库/社媒内容处理` |
+| [小红书自动发布](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E5%B0%8F%E7%BA%A2%E4%B9%A6%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83) | 社媒运营 | 天际自建 | `天际团队SKills库/小红书自动发布` |
+| [语音合成助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E5%8A%A9%E6%89%8B) | 社媒运营 | 天际自建 | `天际团队SKills库/语音合成助手` |
+| [多媒体处理助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E5%A4%9A%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86%E5%8A%A9%E6%89%8B) | 社媒运营 | 天际自建 | `天际团队SKills库/多媒体处理助手` |
+| [会议纪要整理助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81%E6%95%B4%E7%90%86%E5%8A%A9%E6%89%8B) | 效率工具 | 天际自建 | `天际团队SKills库/会议纪要整理助手` |
+| [VC创始人会面准备](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/VC%E5%88%9B%E5%A7%8B%E4%BA%BA%E4%BC%9A%E9%9D%A2%E5%87%86%E5%A4%87) | 效率工具 | 天际自建 | `天际团队SKills库/VC创始人会面准备` |
+| [云Token监控](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E4%BA%91Token%E7%9B%91%E6%8E%A7) | 效率工具 | 天际自建 | `天际团队SKills库/云Token监控` |
+| [费用报销合规检查](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E8%B4%B9%E7%94%A8%E6%8A%A5%E9%94%80%E5%90%88%E8%A7%84%E6%A3%80%E6%9F%A5) | 效率工具 | 天际自建 | `天际团队SKills库/费用报销合规检查` |
+| [pptx-logo-label-fix](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/pptx-logo-label-fix) | 效率工具 | 天际自建 | `天际团队SKills库/pptx-logo-label-fix` |
+| [sg-luma-events](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/sg-luma-events) | 效率工具 | 天际自建 | `天际团队SKills库/sg-luma-events` |
+| [ljg-invest](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-invest) | 投研 | 外部精选 | `外部精选Skills/李继刚skills/ljg-invest` |
+| [ljg-learn](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-learn) | 内容创作 | 外部精选 | `外部精选Skills/李继刚skills/ljg-learn` |
+| [ljg-paper](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-paper) | 内容创作 | 外部精选 | `外部精选Skills/李继刚skills/ljg-paper` |
+| [ljg-paper-river](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-paper-river) | 投研 | 外部精选 | `外部精选Skills/李继刚skills/ljg-paper-river` |
+| [ljg-plain](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-plain) | 内容创作 | 外部精选 | `外部精选Skills/李继刚skills/ljg-plain` |
+| [ljg-rank](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-rank) | 投研 | 外部精选 | `外部精选Skills/李继刚skills/ljg-rank` |
+| [ljg-relationship](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-relationship) | 投研 | 外部精选 | `外部精选Skills/李继刚skills/ljg-relationship` |
+| [ljg-roundtable](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-roundtable) | 内容创作 | 外部精选 | `外部精选Skills/李继刚skills/ljg-roundtable` |
+| [ljg-think](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-think) | 投研 | 外部精选 | `外部精选Skills/李继刚skills/ljg-think` |
+| [ljg-travel](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-travel) | 内容创作 | 外部精选 | `外部精选Skills/李继刚skills/ljg-travel` |
+| [ljg-word](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-word) | 内容创作 | 外部精选 | `外部精选Skills/李继刚skills/ljg-word` |
+| [ljg-writes](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-writes) | 内容创作 | 外部精选 | `外部精选Skills/李继刚skills/ljg-writes` |
+| [ljg-card](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/%E6%9D%8E%E7%BB%A7%E5%88%9Askills/ljg-card) | 内容创作 | 外部精选 | `外部精选Skills/李继刚skills/ljg-card` |
+| [聊天记录归档](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/43-Agent-skills/chat-archiver) | 效率工具 | 外部精选 | `外部精选Skills/43-Agent-skills/chat-archiver` |
+| [飞书助手](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/43-Agent-skills/feishu-assistant) | 效率工具 | 外部精选 | `外部精选Skills/43-Agent-skills/feishu-assistant` |
+| [追踪创业者动态](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/43-Agent-skills/follow-builders) | 投研 | 外部精选 | `外部精选Skills/43-Agent-skills/follow-builders` |
+| [媒体转录](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/43-Agent-skills/media-transcriber) | 内容创作 | 外部精选 | `外部精选Skills/43-Agent-skills/media-transcriber` |
+| [社交媒体情报](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/43-Agent-skills/social-media-scout) | 社媒运营 | 外部精选 | `外部精选Skills/43-Agent-skills/social-media-scout` |
+| [视频创作](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/43-Agent-skills/video-creator) | 社媒运营 | 外部精选 | `外部精选Skills/43-Agent-skills/video-creator` |
+| [浏览器自动化](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/43-Agent-skills/web-browser) | 效率工具 | 外部精选 | `外部精选Skills/43-Agent-skills/web-browser` |
+| [qiaomu-markdown-proxy](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/qiaomu-markdown-proxy) | 效率工具 | 外部精选 | `外部精选Skills/qiaomu-markdown-proxy` |
+| [skill-vetter](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/Skill-Vetter/skills/skill-vetter) | 效率工具 | 外部精选 | `外部精选Skills/Skill-Vetter/skills/skill-vetter` |
+| [skill-creator](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/skill-creator) | 效率工具 | 外部精选 | `外部精选Skills/skill-creator` |
+| [ian-xiaohei-illustrations](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/ian-xiaohei-illustrations) | 内容创作 | 外部精选 | `外部精选Skills/ian-xiaohei-illustrations` |
+| [BP初筛](https://github.com/FutureX-Skills/FutureX-SKills/blob/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/futurex-vc-skills/skills/pitch-deck-screening.md) | 投研 | 外部精选 | `外部精选Skills/futurex-vc-skills/skills/pitch-deck-screening.md` |
+| [Claim核验](https://github.com/FutureX-Skills/FutureX-SKills/blob/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/futurex-vc-skills/skills/claims-verification.md) | 投研 | 外部精选 | `外部精选Skills/futurex-vc-skills/skills/claims-verification.md` |
+| [风险Memo](https://github.com/FutureX-Skills/FutureX-SKills/blob/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/futurex-vc-skills/skills/risk-memo.md) | 投研 | 外部精选 | `外部精选Skills/futurex-vc-skills/skills/risk-memo.md` |
+| [赛道图谱](https://github.com/FutureX-Skills/FutureX-SKills/blob/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/futurex-vc-skills/skills/market-map.md) | 投研 | 外部精选 | `外部精选Skills/futurex-vc-skills/skills/market-map.md` |
+| [公司One-Pager](https://github.com/FutureX-Skills/FutureX-SKills/blob/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/futurex-vc-skills/skills/startup-onepager.md) | 投研 | 外部精选 | `外部精选Skills/futurex-vc-skills/skills/startup-onepager.md` |
+| [技术尽调](https://github.com/FutureX-Skills/FutureX-SKills/blob/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/futurex-vc-skills/skills/technical-dd.md) | 投研 | 外部精选 | `外部精选Skills/futurex-vc-skills/skills/technical-dd.md` |
+| [投委会Memo](https://github.com/FutureX-Skills/FutureX-SKills/blob/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/futurex-vc-skills/skills/memo-to-ic.md) | 投研 | 外部精选 | `外部精选Skills/futurex-vc-skills/skills/memo-to-ic.md` |
+| [用户反馈分析](https://github.com/FutureX-Skills/FutureX-SKills/blob/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/futurex-vc-skills/skills/product-feedback-analysis.md) | 投研 | 外部精选 | `外部精选Skills/futurex-vc-skills/skills/product-feedback-analysis.md` |
+| [论文投资分析](https://github.com/FutureX-Skills/FutureX-SKills/blob/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/futurex-vc-skills/skills/paper-analysis.md) | 投研 | 外部精选 | `外部精选Skills/futurex-vc-skills/skills/paper-analysis.md` |
+| [专利分析](https://github.com/FutureX-Skills/FutureX-SKills/blob/main/%E5%A4%96%E9%83%A8%E7%B2%BE%E9%80%89Skills/futurex-vc-skills/skills/patent-analysis.md) | 投研 | 外部精选 | `外部精选Skills/futurex-vc-skills/skills/patent-analysis.md` |
+| [TODO任务追踪](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/TODO%E4%BB%BB%E5%8A%A1%E8%BF%BD%E8%B8%AA) | 效率工具 | 天际自建 | `天际团队SKills库/TODO任务追踪` |
+| [事项提醒](https://github.com/FutureX-Skills/FutureX-SKills/tree/main/%E5%A4%A9%E9%99%85%E5%9B%A2%E9%98%9FSKills%E5%BA%93/%E4%BA%8B%E9%A1%B9%E6%8F%90%E9%86%92) | 效率工具 | 天际自建 | `天际团队SKills库/事项提醒` |
+
+> 这部分由 `node scripts/generate-catalog.mjs` 生成，请修改 `skills.json` 后再运行生成脚本。
+<!-- CATALOG:END -->
 
 ---
 
@@ -123,7 +201,7 @@ futurex-skills/
 │       ├── tasks/                    # 7个可直接执行的任务模板
 │       └── codex-skills/futurex-vc/  # 打包好的 Codex Skill（入口 SKILL.md）
 │
-└── 天际团队SKills库/        # 天际资本团队自建 Skills（26个）
+└── 天际团队SKills库/        # 天际资本团队自建 Skills（31个）
     ├── 研报助手                  # MoE 多智能体调度中心，生成投行级尽调报告
     ├── 视频标题大师              # 短视频封面标题与简介生成
     ├── 硅谷季度报告              # VC 赛道趋势分析报告（90天）
@@ -173,4 +251,3 @@ futurex-skills/
 📧 capper@futurexcapital.com
 
 *Built for FutureX Team · Open for Everyone*
-

@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FX-SKILL | FutureX Skills</title>
+    <meta name="description" content="FutureX Skills，天际资本团队自建与外部精选的 AI Agent Skills 知识库。按任务查找投研、内容创作、社媒运营和效率工具。">
+    <meta name="theme-color" content="#faf6f0">
+    <meta property="og:title" content="FutureX Skills | AI Agent Skills 知识库">
+    <meta property="og:description" content="按任务查找天际资本团队自建与社区精选的 AI Agent Skills。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://futurex-skills.vercel.app/">
+    <link rel="canonical" href="https://futurex-skills.vercel.app/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;600&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
@@ -16,7 +23,7 @@
             --amber-bg: #fdf8ec;
             --ink: #2c2418;
             --ink-light: #5a4d3a;
-            --ink-muted: #9a8e7a;
+            --ink-muted: #6f6251;
             --bg: #faf6f0;
             --paper: #f5efe6;
             --white: #fffef8;
@@ -69,6 +76,7 @@
             background: linear-gradient(90deg, transparent, rgba(88,86,214,0.4), transparent);
             animation: scan 8s linear infinite;
             pointer-events: none; z-index: 9999;
+            display: none;
         }
 
         @keyframes scan {
@@ -101,6 +109,7 @@
             border-radius: 50%;
             background: var(--primary);
             pointer-events: none; z-index: 0;
+            display: none;
         }
         .tech-node::after {
             content: '';
@@ -129,8 +138,7 @@
         }
 
         /* ── SCROLL REVEAL ── */
-        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
-        .reveal.visible { opacity: 1; transform: none; }
+        .reveal { opacity: 1; transform: none; }
         .r1 { transition-delay: 0.1s; }
         .r2 { transition-delay: 0.2s; }
         .r3 { transition-delay: 0.3s; }
@@ -183,9 +191,30 @@
         .nav-links a:hover { color: var(--primary); }
         .nav-links a.active { color: var(--primary); font-weight: 600; }
 
+        .nav-toggle {
+            display: none;
+            width: 44px; height: 44px;
+            border: var(--bd); border-radius: 10px;
+            background: var(--white); color: var(--ink);
+            font-size: 18px; cursor: pointer;
+        }
+
+        .nav-toggle:focus-visible,
+        .nav-links a:focus-visible,
+        .filter-pill:focus-visible,
+        .modal-btn:focus-visible,
+        .card-open:focus-visible,
+        .hero-primary:focus-visible,
+        .hero-secondary:focus-visible,
+        .clear-filters:focus-visible,
+        .modal-close:focus-visible {
+            outline: 3px solid rgba(88,86,214,0.35);
+            outline-offset: 3px;
+        }
+
         /* ── HERO ── */
         .hero {
-            min-height: 100vh;
+            min-height: 680px;
             display: flex; align-items: center;
             padding: 100px 0 80px;
             position: relative;
@@ -193,8 +222,9 @@
 
         .hero::before {
             content: '';
-            position: absolute; top: 8%; right: -4%;
+            position: absolute; top: 8%; right: 0;
             width: 600px; height: 600px;
+            max-width: 100%;
             background: radial-gradient(circle, rgba(88,86,214,0.07) 0%, transparent 70%);
             border-radius: 50%; pointer-events: none;
         }
@@ -241,10 +271,27 @@
             font-size: clamp(1rem, 2vw, 1.2rem);
             color: var(--ink-light);
             max-width: 560px;
-            margin-bottom: 48px;
+            margin-bottom: 28px;
             line-height: 1.9;
             letter-spacing: 0.04em;
         }
+
+        .hero-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
+        .hero-primary, .hero-secondary {
+            min-height: 48px; display: inline-flex; align-items: center; justify-content: center;
+            padding: 0 20px; border-radius: 12px; font-family: var(--font-mono);
+            font-size: 12px; text-decoration: none; cursor: pointer; transition: transform .2s ease, background .2s ease;
+        }
+        .hero-primary { background: var(--primary); color: #fff; border: 1px solid var(--primary); }
+        .hero-secondary { background: transparent; color: var(--primary); border: var(--bd-blue); }
+        .hero-primary:hover, .hero-secondary:hover { transform: translateY(-2px); }
+        .hero-search { max-width: 620px; margin-top: 4px; }
+        .hero-search label { display: block; font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted); margin-bottom: 8px; }
+        .hero-search-row { display: flex; gap: 8px; }
+        .hero-search input { flex: 1; min-height: 48px; padding: 0 16px; border: var(--bd-blue); border-radius: 12px; background: rgba(255,254,248,.85); color: var(--ink); font: 14px var(--font-body); }
+        .hero-search input:focus { outline: 3px solid rgba(88,86,214,.12); border-color: var(--primary); }
+        .hero-search button { min-height: 48px; padding: 0 18px; border: 0; border-radius: 12px; background: var(--ink); color: #fff; font: 12px var(--font-mono); cursor: pointer; }
+        .hero-search-hint { margin-top: 8px; color: var(--ink-muted); font-size: 12px; }
 
         /* ── STATS BAR ── */
         .stats-bar {
@@ -276,6 +323,7 @@
         .pet {
             position: absolute;
             pointer-events: none;
+            display: none;
             filter: drop-shadow(0 1px 4px rgba(255,255,255,0.15));
             transition: transform 0.15s ease;
         }
@@ -295,12 +343,14 @@
             display: flex;
             align-items: center;
             gap: 16px;
+            flex-wrap: wrap;
         }
 
         .search-wrap { position: relative; flex-shrink: 0; width: 260px; }
         .search-wrap input {
             width: 100%;
-            padding: 11px 20px 11px 44px;
+            min-height: 44px;
+            padding: 10px 20px 10px 44px;
             font-family: var(--font-body);
             font-size: 13px;
             background: var(--white);
@@ -329,7 +379,8 @@
         .filter-pill {
             font-family: var(--font-mono);
             font-size: 11px;
-            padding: 8px 6px;
+            min-height: 44px;
+            padding: 8px 10px;
             border-radius: 10px;
             border: var(--bd-blue);
             background: var(--white);
@@ -342,6 +393,9 @@
         }
         .filter-pill:hover { border-color: var(--primary); color: var(--primary); }
         .filter-pill.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+        .search-meta { display: flex; align-items: center; gap: 12px; margin-left: auto; min-height: 44px; }
+        .result-status { font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted); white-space: nowrap; }
+        .clear-filters { min-height: 44px; padding: 0 12px; border: 0; background: transparent; color: var(--primary); font: 11px var(--font-mono); cursor: pointer; }
 
         /* ── SECTION ── */
         .section { padding: 64px 0; }
@@ -399,6 +453,7 @@
             animation: fadeUp 0.5s ease forwards;
             opacity: 0;
         }
+        .skill-card:focus-visible { outline: 3px solid rgba(88,86,214,.34); outline-offset: 4px; }
 
         @keyframes fadeUp { from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:none;} }
 
@@ -448,7 +503,10 @@
             color: var(--primary);
             opacity: 0.7;
             margin-bottom: 6px;
+            display: flex; align-items: center; gap: 7px;
         }
+        .card-mono svg { width: 18px; height: 18px; color: var(--primary); }
+        .card-mono span { font-size: 10px; letter-spacing: .08em; }
 
         .card-name {
             font-family: var(--font-display);
@@ -473,12 +531,15 @@
             padding-left: 12px;
             border-left: 2px solid var(--primary);
         }
+        .card-meta { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 2px; color: var(--ink-muted); font: 10px/1.5 var(--font-mono); }
+        .card-meta span { padding: 3px 7px; border-radius: 6px; background: var(--paper); }
 
         .card-footer {
             display: flex; align-items: center;
             justify-content: space-between;
             padding-top: 12px;
             border-top: var(--bd);
+            gap: 8px;
         }
 
         .card-tag {
@@ -509,6 +570,8 @@
             flex: 1;
             justify-content: center;
         }
+        .card-open { min-height: 44px; padding: 0 6px; border: 0; background: transparent; color: var(--primary); font: 11px var(--font-mono); cursor: pointer; white-space: nowrap; }
+        .card-open:hover { text-decoration: underline; }
         .card-author-dot {
             font-size: 6px;
             color: var(--primary);
@@ -583,11 +646,11 @@
             border: var(--bd-blue);
             border-radius: 24px;
             padding: 36px;
-            max-width: 460px; width: 88%;
+            max-width: 560px; width: min(92%, 560px); max-height: min(86vh, 720px);
             transform: scale(0.94);
             transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
             box-shadow: var(--sh-lifted);
-            position: relative; overflow: hidden;
+            position: relative; overflow: hidden; display: flex; flex-direction: column;
         }
 
         .modal::before {
@@ -597,6 +660,8 @@
         }
 
         .modal-overlay.visible .modal { transform: scale(1); }
+        .modal-close { position: absolute; top: 14px; right: 16px; width: 44px; height: 44px; border: 0; border-radius: 10px; background: transparent; color: var(--ink-muted); font-size: 24px; cursor: pointer; z-index: 1; }
+        .modal-scroll { overflow-y: auto; padding-right: 4px; }
 
         .modal-tag {
             font-family: var(--font-mono);
@@ -628,6 +693,12 @@
             line-height: 1.8;
             margin-bottom: 24px;
         }
+        .modal-detail { color: var(--ink-light) !important; }
+        .modal-meta { display: grid; gap: 8px; margin: -6px 0 20px; color: var(--ink-muted); font: 11px/1.6 var(--font-mono); }
+        .modal-meta strong { color: var(--ink-light); font-weight: 600; }
+        .install-box { margin: 4px 0 22px; padding: 14px; border: var(--bd); border-radius: 12px; background: var(--paper); }
+        .install-label { margin-bottom: 8px; color: var(--ink-muted); font: 11px var(--font-mono); }
+        .install-command { display: block; overflow-x: auto; color: var(--ink); font: 11px/1.6 var(--font-mono); white-space: pre-wrap; word-break: break-word; }
 
         .modal-actions { display: flex; gap: 12px; }
 
@@ -638,13 +709,15 @@
             color: var(--primary);
             margin-bottom: 10px;
         }
+        .feedback-form label { display: block; margin-bottom: 8px; color: var(--primary); font: 12px var(--font-mono); }
         .feedback-form textarea {
             width: 100%;
             padding: 12px;
             border: var(--bd-blue);
             border-radius: 10px;
             font-family: var(--font-body);
-            font-size: 13px;
+            min-height: 96px;
+            font-size: 14px;
             resize: none;
             outline: none;
             background: var(--paper);
@@ -666,7 +739,7 @@
         .feedback-result.error { background: rgba(255,55,95,0.1); color: var(--accent); }
 
         .modal-btn {
-            flex: 1; padding: 13px 20px;
+            flex: 1; min-height: 44px; padding: 10px 16px;
             border-radius: 12px;
             font-family: var(--font-mono);
             font-size: 13px; font-weight: 600;
@@ -679,6 +752,12 @@
         .modal-primary:hover { background: #4a49c0; transform: translateY(-1px); }
         .modal-secondary { background: transparent; border: var(--bd); color: var(--ink-light); }
         .modal-secondary:hover { background: var(--paper); }
+        .modal-open { overflow: hidden; }
+        .toast { position: fixed; left: 50%; bottom: 28px; z-index: 3000; min-height: 44px; padding: 12px 18px; border-radius: 12px; background: var(--ink); color: #fff; font: 13px var(--font-body); box-shadow: var(--sh-lifted); opacity: 0; transform: translate(-50%, 12px); pointer-events: none; transition: opacity .2s ease, transform .2s ease; }
+        .toast.visible { opacity: 1; transform: translate(-50%, 0); }
+        .toast[data-type="error"] { background: var(--accent); }
+        .skip-link { position: fixed; top: 8px; left: 8px; z-index: 4000; transform: translateY(-150%); padding: 10px 14px; border-radius: 8px; background: var(--ink); color: #fff; font: 12px var(--font-mono); }
+        .skip-link:focus { transform: translateY(0); }
 
         /* ── GPILOT SPOTLIGHT ── */
         .gpilot-section { padding: 64px 0 32px; }
@@ -689,7 +768,6 @@
             border-radius: 20px;
             padding: 40px 48px;
             overflow: hidden;
-            cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex; align-items: center; gap: 48px;
         }
@@ -698,15 +776,17 @@
         /* Glow background */
         .gpilot-card::before {
             content: '';
-            position: absolute; top: -40%; right: -10%;
+            position: absolute; top: -40%; right: 0;
             width: 400px; height: 400px;
+            max-width: 100%;
             background: radial-gradient(circle, rgba(212,160,60,0.15) 0%, transparent 70%);
             border-radius: 50%; pointer-events: none;
         }
         .gpilot-card::after {
             content: '';
-            position: absolute; bottom: -30%; left: 10%;
+            position: absolute; bottom: -30%; left: 0;
             width: 300px; height: 300px;
+            max-width: 100%;
             background: radial-gradient(circle, rgba(88,86,214,0.12) 0%, transparent 70%);
             border-radius: 50%; pointer-events: none;
         }
@@ -728,7 +808,7 @@
             position: relative; z-index: 1;
         }
 
-        .gpilot-body { position: relative; z-index: 1; flex: 1; }
+        .gpilot-body { position: relative; z-index: 1; flex: 1; min-width: 0; }
 
         .gpilot-badge {
             font-family: var(--font-mono);
@@ -786,6 +866,8 @@
             font-family: var(--font-mono);
             font-size: 10px; color: rgba(255,255,255,0.3);
             text-align: center;
+            max-width: 100%;
+            overflow-wrap: anywhere;
         }
 
         @media(max-width: 768px) {
@@ -800,18 +882,33 @@
             .skills-grid { grid-template-columns: repeat(2, 1fr); }
             .search-sticky .container { flex-direction: column; gap: 10px; }
             .search-wrap { width: 100%; }
-            .filter-row { grid-template-columns: repeat(3, 1fr); }
+            .filter-row { width: 100%; display: flex; overflow-x: auto; padding-bottom: 2px; }
+            .filter-pill { flex: 0 0 auto; min-width: 92px; }
         }
         @media(max-width: 640px) {
             .skills-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
+            .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+            .nav-links { display: none; position: fixed; top: 60px; left: 0; right: 0; padding: 12px 28px 16px; background: rgba(250,246,240,.98); border-bottom: var(--bd); box-shadow: var(--sh); flex-direction: column; align-items: stretch; gap: 0; }
+            .nav-links.open { display: flex; }
+            .nav-links a { min-height: 44px; display: flex; align-items: center; }
             .stats-inner { gap: 32px; }
             .curated-wrap { padding: 16px; }
-            .filter-row { grid-template-columns: repeat(2, 1fr); }
+            .hero-search-row { flex-direction: column; }
+            .hero-search button { width: 100%; }
+            .search-meta { width: 100%; justify-content: space-between; margin-left: 0; }
+            .modal { padding: 28px 20px 20px; }
+            .modal-actions { flex-wrap: wrap; }
+            .modal-actions .modal-btn { flex: 1 1 calc(50% - 6px); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+            .scan-line, .tech-node, .pet { display: none !important; }
         }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <!-- Tech overlays -->
     <div class="scan-line"></div>
     <div class="corner-tl"></div>
@@ -847,12 +944,13 @@
                 FutureX <span style="color:var(--primary)">Skills</span>
                 <span class="nav-badge">v2.0</span>
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="mainNav">
                 <a href="#gpilot">GPilot</a>
                 <a href="#builtin">自建</a>
                 <a href="#curated">精选</a>
                 <a href="https://github.com/FutureX-Skills" target="_blank">GitHub →</a>
             </div>
+            <button class="nav-toggle" id="navToggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="打开导航">☰</button>
         </div>
     </nav>
 
@@ -867,6 +965,18 @@
                 </div>
                 <h1 class="reveal r1">FX<span class="grad">-SKILL</span></h1>
                 <p class="hero-tagline reveal r2">天际资本团队打造的独立 AI Agent Skills 平台，汇集团队自创与外部精选 Skills，供大家免费使用</p>
+                <div class="hero-actions reveal r3">
+                    <a class="hero-primary" href="#builtin">浏览全部 Skills ↓</a>
+                    <button class="hero-secondary" id="heroSearchButton" type="button">按任务搜索</button>
+                </div>
+                <form class="hero-search reveal r3" id="heroSearchForm" role="search">
+                    <label for="heroSearchInput">你想完成什么任务？</label>
+                    <div class="hero-search-row">
+                        <input id="heroSearchInput" type="search" autocomplete="off" placeholder="例如：写一篇投研报告、排版公众号文章">
+                        <button type="submit">搜索 Skills</button>
+                    </div>
+                    <div class="hero-search-hint">试试：投研 · 内容创作 · 公众号排版 · 会议纪要</div>
+                </form>
             </div>
         </div>
     </section>
@@ -881,11 +991,11 @@
                 </div>
                 <div class="stat">
                     <div class="stat-num" id="statBuiltin" data-target="0">0</div>
-                    <div class="stat-label">天际自建</div>
+                    <div class="stat-label"><span id="statBuiltinLabel">天际自建</span></div>
                 </div>
                 <div class="stat">
                     <div class="stat-num" id="statCurated" data-target="0">0</div>
-                    <div class="stat-label">外部精选</div>
+                    <div class="stat-label"><span id="statCuratedLabel">外部精选</span></div>
                 </div>
             </div>
 
@@ -994,14 +1104,18 @@
         <div class="container">
             <div class="search-wrap">
                 <span class="s-icon">🔍</span>
-                <input type="text" id="searchInput" placeholder="搜索 Skills 名称或描述...">
+                <input type="search" id="searchInput" aria-label="搜索 Skills 名称、描述、标签、输入或输出" autocomplete="off" placeholder="搜索名称、描述或标签...">
             </div>
             <div class="filter-row" id="filterPills">
-                <button class="filter-pill active" data-filter="all">全部</button>
-                <button class="filter-pill" data-filter="投研">投研分析</button>
-                <button class="filter-pill" data-filter="内容创作">内容创作</button>
-                <button class="filter-pill" data-filter="社媒运营">社媒运营</button>
-                <button class="filter-pill" data-filter="效率工具">效率工具</button>
+                <button class="filter-pill active" type="button" aria-pressed="true" data-filter="all">全部</button>
+                <button class="filter-pill" type="button" aria-pressed="false" data-filter="投研">投研分析</button>
+                <button class="filter-pill" type="button" aria-pressed="false" data-filter="内容创作">内容创作</button>
+                <button class="filter-pill" type="button" aria-pressed="false" data-filter="社媒运营">社媒运营</button>
+                <button class="filter-pill" type="button" aria-pressed="false" data-filter="效率工具">效率工具</button>
+            </div>
+            <div class="search-meta">
+                <span class="result-status" id="resultStatus" role="status" aria-live="polite">正在加载目录…</span>
+                <button class="clear-filters" id="clearFilters" type="button">清除筛选</button>
             </div>
         </div>
     </div>
@@ -1009,7 +1123,7 @@
     <div class="divider"></div>
 
     <!-- ── MAIN ── -->
-    <main class="container">
+    <main class="container" id="main-content">
 
         <!-- ── GPILOT SPOTLIGHT ── -->
         <section class="gpilot-section reveal" id="gpilot">
@@ -1020,7 +1134,7 @@
                 </div>
                 <p class="section-subtitle">天际资本 CEO 亲自开源的旗舰项目</p>
             </div>
-            <div class="gpilot-card" onclick="window.open('https://github.com/ruiyang-xu/GPilot','_blank')">
+            <div class="gpilot-card">
                 <div class="gpilot-card-border"></div>
                 <div class="gpilot-icon">🚀</div>
                 <div class="gpilot-body">
@@ -1052,6 +1166,7 @@
                 <div class="section-label">
                     <span class="sq sq-blue"></span>
                     <span class="section-title">天际自建</span>
+                    <span class="section-count" id="builtinCount">31</span>
                 </div>
                 <p class="section-subtitle">团队精心打造的垂直场景 Skills，覆盖投研尽调、内容创作、运营提效全链路</p>
             </div>
@@ -1066,6 +1181,7 @@
                 <div class="section-label">
                     <span class="sq sq-amber"></span>
                     <span class="section-title">外部精选</span>
+                    <span class="section-count" id="curatedCount">34</span>
                 </div>
                 <p class="section-subtitle">来自社区的优质 Skills 合集，精选李继刚、43-Agent 等高质量开源工具</p>
             </div>
@@ -1076,7 +1192,7 @@
 
         <div class="empty-state" id="emptyState">
             <div class="empty-icon">🔍</div>
-            <p>没有找到匹配的 Skill</p>
+            <p id="emptyStateText">没有找到匹配的 Skill</p>
         </div>
     </main>
 
@@ -1091,421 +1207,420 @@
     </footer>
 
     <!-- ── MODAL ── -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal">
+    <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+            <button class="modal-close" id="modalCloseIcon" type="button" aria-label="关闭详情">×</button>
             <div class="modal-tag" id="modalTag">分类</div>
             <h3 id="modalTitle">Skill Name</h3>
             <p class="modal-category" id="modalCategory">分类 · 来源</p>
-            <p id="modalDesc">描述</p>
+            <div class="modal-scroll">
+                <p id="modalDescription">描述</p>
+                <p class="modal-detail" id="modalDetail">补充说明</p>
+                <div class="modal-meta" id="modalMeta"></div>
             <p class="modal-author" id="modalAuthor" style="display:none;"></p>
 
-            <!-- Feedback Form -->
-            <div class="feedback-form" id="feedbackForm" style="display:none;">
-                <div class="feedback-title">匿名反馈</div>
-                <textarea id="feedbackText" placeholder="对这个 Skill 有什么建议？使用中遇到什么问题？" rows="3"></textarea>
-                <div class="feedback-actions">
-                    <button class="modal-btn modal-secondary" id="feedbackCancel">取消</button>
-                    <button class="modal-btn modal-primary" id="feedbackSubmit">提交反馈</button>
+                <div class="install-box">
+                    <div class="install-label">安装命令</div>
+                    <code class="install-command" id="installCommand">加载中…</code>
                 </div>
-                <div class="feedback-result" id="feedbackResult" style="display:none;"></div>
+
+                <div class="feedback-form" id="feedbackForm" style="display:none;">
+                    <label for="feedbackText">匿名反馈</label>
+                    <textarea id="feedbackText" placeholder="对这个 Skill 有什么建议？使用中遇到什么问题？" rows="3"></textarea>
+                    <div class="feedback-actions">
+                        <button class="modal-btn modal-secondary" id="feedbackCancel" type="button">取消</button>
+                        <button class="modal-btn modal-primary" id="feedbackSubmit" type="button">提交反馈</button>
+                    </div>
+                    <div class="feedback-result" id="feedbackResult" role="alert" aria-live="assertive" style="display:none;"></div>
+                </div>
             </div>
 
             <div class="modal-actions" id="modalActions">
-                <button class="modal-btn modal-secondary" id="modalClose">关闭</button>
-                <button class="modal-btn modal-secondary" id="modalFeedback">反馈</button>
-                <a href="#" class="modal-btn modal-primary" id="modalGo" target="_blank">前往 GitHub →</a>
+                <button class="modal-btn modal-secondary" id="modalClose" type="button">关闭</button>
+                <button class="modal-btn modal-secondary" id="modalFeedback" type="button">反馈</button>
+                <button class="modal-btn modal-secondary" id="copyInstall" type="button">复制安装命令</button>
+                <a href="#" class="modal-btn modal-primary" id="modalGo" target="_blank" rel="noopener noreferrer">前往 GitHub →</a>
             </div>
         </div>
     </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script>
         /* ── Data ── */
-        const icons = {
-            '研报助手':'📊','PIB投研搜索':'🔎','投资-Memo':'📋','立项报告':'📑',
-            '项目立项投资报告':'📁','硅谷季度报告':'🌉','PE募资追踪器':'💎',
-            '视频标题大师':'🎬','AI内容写作助手':'✍️','微信公众号Markdown排版助手':'🎨','AI-VC推文助手':'🐦',
-            'FutureX公众号长文写作':'📝','FutureX创意排版':'🧭',
-            'LinkedIn内容助手':'💼','播客后期助手':'🎙️','旅行规划助手':'✈️','金融网页构建器':'🏛️',
-            '社媒营销':'📣','社媒内容处理':'🖼️','小红书自动发布':'📕','语音合成助手':'🔊',
-            '多媒体处理助手':'🎞️','会议纪要整理助手':'📓','VC创始人会面准备':'🤝',
-            'TODO任务追踪':'☑️','事项提醒':'⏰','云Token监控':'☁️','费用报销合规检查':'💳','pptx-logo-label-fix':'📊',
-            'sg-luma-events':'🇸🇬','vcpe-fundraising-tracker':'💰',
-            'ljg-invest':'📈','ljg-learn':'🧠','ljg-paper':'📄','ljg-paper-river':'🌊',
-            'ljg-plain':'🧒','ljg-rank':'📉','ljg-relationship':'🔗','ljg-roundtable':'🗣️',
-            'ljg-think':'🎯','ljg-travel':'🌍','ljg-word':'📚','ljg-writes':'✒️',
-            'ljg-card':'🃏','chat-archiver':'💬','feishu-assistant':'📎','follow-builders':'👀',
-            'media-transcriber':'🎥','social-media-scout':'🕵️','video-creator':'🎞️','web-browser':'🌐',
-            'qiaomu-markdown-proxy':'📄','skill-creator':'🛠️','skill-vetter':'🛡️','ian-xiaohei-illustrations':'🖌️',
-            'BP初筛':'📊','Claim核验':'✅','风险Memo':'⚠️','赛道图谱':'🗺️','公司One-Pager':'📄','技术尽调':'🔬','投委会Memo':'📋','用户反馈分析':'💬','论文投资分析':'📑','专利分析':'⚖️',
-            'GPilot-Simon':'🚀'
+
+        let skills = [];
+        let currentFilter = 'all';
+        let currentSearch = '';
+        let currentSkillId = '';
+        let lastFocusedElement = null;
+
+        const categoryIcons = {
+            '投研': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9m5 10V5m5 14v-7m5 7V3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="m3 7 5-3 5 2 6-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+            '内容创作': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19h14M7 16l9-9 2 2-9 9H7v-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m14 6 2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+            '社媒运营': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9l-4 3v-3a2 2 0 0 1-1-2v-7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 5h8M10 3h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+            '效率工具': '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M5.6 5.6l2.8 2.8m7.2 7.2 2.8 2.8m0-12.8-2.8 2.8M8.4 15.6l-2.8 2.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>'
         };
 
-        const skills = [
-    { name:"研报助手", description:"FutureX Capital 多智能体调度中心（MoE Orchestrator）", detail:"多智能体调度中心，生成投行级尽调报告，支持一键安装", category:"投研", source:"builtin", author:"Xavier", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/研报助手" },
-    { name:"PIB投研搜索", description:"从公开信息生成私募公司的 VC 风格投资备忘录", detail:"PIB搜索工具，支持最新动态优先（<1年数据），包含投资亮点、运营/财务数据、竞争格局、上行潜力等模块", category:"投研", source:"builtin", author:"张翰钦", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/PIB投研搜索" },
-    { name:"投资-Memo", description:"VC 投资备忘录/Deal Memo 撰写工具", detail:"将原始笔记一键转化为专业的合伙人级投资报告", category:"投研", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/投资-Memo" },
-    { name:"立项报告", description:"中文 VC 立项报告撰写工具", detail:"将原始笔记或零散信息整理成专业的内部立项报告", category:"投研", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/立项报告" },
-    { name:"项目立项投资报告", description:"按标准立项报告框架生成完整投资立项报告", detail:"适用于立项报告、投资报告、项目过会材料、投资决策支持文档", category:"投研", source:"builtin", author:"李美尚", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/项目立项投资报告" },
-    { name:"硅谷季度报告", description:"深度 VC 赛道趋势分析报告生成工具", detail:"追踪过去三个月科技/AI赛道的投资变化、范式转移与产业动态，适用于投资委员会报告、LP更新", category:"投研", source:"builtin", author:"Mickey", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/硅谷季度报告" },
-    { name:"PE募资追踪器", description:"全球一级市场股权投资募资动态追踪工具", detail:"重点关注中国和美国市场，自动生成LP情报报告", category:"投研", source:"builtin", author:"周凱", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/PE募资追踪器" },
-    { name:"vcpe-fundraising-tracker", description:"全球 VC/PE 募资动态追踪工具", detail:"多数据源聚合（PitchBook/Crunchbase/TechCrunch/VentureBeat/PE Hub/投中网/36氪），支持最新新闻、周报生成、特定机构追踪、地区/行业筛选", category:"投研", source:"builtin", author:"Angela", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/vcpe-fundraising-tracker" },
-    { name:"视频标题大师", description:"短视频封面标题与简介生成工具", detail:"支持抖音、视频号、小红书等平台，25个多风格封面标题", category:"内容创作", source:"builtin", author:"Capper", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/视频标题大师" },
-    { name:"AI内容写作助手", description:"AI行业热点深度长文工具", detail:"支持5000字以上中文长文+Word文档输出，触发词：写AI热点文章、AI日报/周报/深度报告", category:"内容创作", source:"builtin", author:"Joseph", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/AI内容写作助手" },
-    { name:"FutureX公众号长文写作", description:"天际资本官方公众号长文写作工具", detail:"将新闻、报告、访谈或零散素材写成天际资本风格的公众号长文，内置选题判断、机构口径和四层自检流程", category:"内容创作", source:"builtin", author:"Capper", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/futurex-writer" },
-    { name:"微信公众号Markdown排版助手", description:"Markdown → 公众号 docx 排版工具", detail:"可以把Markdown文档内容排版成可以直接导入公众号的docx文档", category:"内容创作", source:"builtin", author:"肖迪馨", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/公众号排版助手" },
-    { name:"FutureX创意排版", description:"微信公众号「电表」杂志化排版工具", detail:"将 Markdown 转为可直接粘贴至微信公众号编辑器的 docx，提供琥珀、青金、炭橙、雾青四套配色与读数、金句、CTA 等组件", category:"内容创作", source:"builtin", author:"Capper", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/fx-wechat-formatter" },
-    { name:"AI-VC推文助手", description:"VC Twitter/X 帖子生成工具", detail:"专为AI VC投资人设计，将投研洞察转化为高互动推文", category:"内容创作", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/AI-VC推文助手" },
-    { name:"LinkedIn内容助手", description:"LinkedIn 内容生成工具", detail:"短帖子（150-300词）+长文章（400-800词），中译英专业输出", category:"内容创作", source:"builtin", author:"Cody", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/LinkedIn内容助手" },
-    { name:"播客后期助手", description:"双语播客后期全套工具", detail:"将原始文字稿转换为多平台适配内容（公众号、小红书、B站、YouTube、TikTok等）", category:"内容创作", source:"builtin", author:"TongTong", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/播客后期助手" },
-    { name:"旅行规划助手", description:"保姆级旅行规划工具", detail:"分步问询、视觉友好、马蜂窝/小红书爆款攻略整合，输出可截图保存的完整行程方案", category:"内容创作", source:"builtin", author:"朱颜", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/旅行规划助手" },
-    { name:"金融网页构建器", description:"Goldman Sachs 风格 Web Artifacts 构建工具", detail:"使用React+TypeScript+Tailwind CSS+shadcn/ui创建专业金融分析网页", category:"内容创作", source:"builtin", author:"Simon", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/金融网页构建器" },
-    { name:"社媒营销", description:"跨平台社交媒体营销工具", detail:"Sustainable social media marketing across LinkedIn, TikTok, Meta, YouTube, X", category:"社媒运营", source:"builtin", author:"Angela", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/社媒营销" },
-    { name:"社媒内容处理", description:"社交媒体图片/视频处理自动化工具", detail:"图片加水印/文字标注、视频拼接合并、多平台尺寸适配（小红书/Twitter/Instagram等）", category:"社媒运营", source:"builtin", author:"林秋彤Echo", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/社媒内容处理" },
-    { name:"小红书自动发布", description:"小红书自动化发布工具", detail:"基于xiaohongshu-mcp+MCPorter，支持图片上传、标题填写、正文填写、标签设置", category:"社媒运营", source:"builtin", author:"Ben", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/小红书自动发布" },
-    { name:"语音合成助手", description:"Text-to-Speech 多模型工具", detail:"支持DIA TTS、Kokoro TTS、Chatterbox、Higgs Audio、VibeVoice，适用于产品演示、有声书、播客生成", category:"社媒运营", source:"builtin", author:"Annie", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/语音合成助手" },
-    { name:"多媒体处理助手", description:"图片处理+PDF处理工具", detail:"图片调整大小/裁剪/滤镜/格式转换、PDF文字编辑/图片插入/页面操作/合并拆分/压缩", category:"社媒运营", source:"builtin", author:"董鹏", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills��/多媒体处理助手" },
-    { name:"会议纪要整理助手", description:"录音转结构化会议纪要", detail:"将录音转文字整理为结构化会议纪要", category:"效率工具", source:"builtin", author:"王涵", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/会议纪要整理助手" },
-    { name:"VC创始人会面准备", description:"创始人会面问题清单生成", detail:"将公司信息转化为英文、梳理赛道框架、标注关键决策点，生成定制化创始人问题清单", category:"效率工具", source:"builtin", author:"Michael Leung", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/VC创始人会面准备" },
-    { name:"云Token监控", description:"多云厂商 Token 消耗监控", detail:"监控阿里云/腾讯云/华为云/百度云/AWS/Azure/GCP/OpenAI/Anthropic等每日Token消耗，生成可视化图表", category:"效率工具", source:"builtin", author:"黄凯", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/云Token监控" },
-    { name:"费用报销合规检查", description:"收据与报销单交叉核对工具", detail:"报销单合规审查，标记差异和缺失项，生成合规审查摘要供人工审批", category:"效率工具", source:"builtin", author:"Yvonne / Alex", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/费用报销合规检查" },
-    { name:"pptx-logo-label-fix", description:"自动修复 PPTX 幻灯片中公司 Logo 与文字标签错位问题", detail:"智能提取Logo、修复错位、补充标签、重新排序，适用于 FutureX 投资组合幻灯片", category:"效率工具", source:"builtin", author:"Michael", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/pptx-logo-label-fix" },
-    { name:"sg-luma-events", description:"新加坡 Luma 活动追踪工具", detail:"追踪 lu.ma 上 Family Office、募资、AI、科技、VC/PE 及科技大厂相关活动，生成结构化周报，可选飞书自动推送", category:"效率工具", source:"builtin", author:"Angela", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/天际团队SKills库/sg-luma-events" },
-    { name:"ljg-invest", description:"投资分析报告", detail:"投资分析报告生成", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-learn", description:"概念解剖（8维度）", detail:"概念解剖（8维度）", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-paper", description:"论文阅读（普通人版）", detail:"论文阅读（普通人版）", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-paper-river", description:"论文溯源（问题演化史）", detail:"论文溯源（问题演化史）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-plain", description:"说人话（12岁能懂）", detail:"说人话（12岁能懂）", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-rank", description:"降秩分析", detail:"降秩分析", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部��选Skills/李继刚skills" },
-    { name:"ljg-relationship", description:"关系分析", detail:"关系分析", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-roundtable", description:"圆桌辩论框架", detail:"圆桌辩论框架", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-think", description:"追本之箭（纵向深钻）", detail:"追本之箭（纵向深钻）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-travel", description:"深度旅行研究", detail:"深度旅行研究", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-word", description:"英语单词深度掌握", detail:"英语单词深度掌握", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-writes", description:"写作引擎", detail:"写作引擎", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"ljg-card", description:"PNG 海报/信息图", detail:"PNG 海报/信息图", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/李继刚skills" },
-    { name:"聊天记录归档", description:"聊天记录归档", detail:"聊天记录归档", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-    { name:"飞书助手", description:"飞书助手", detail:"飞书助手", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-    { name:"追踪创业者动态", description:"追踪创业者动态", detail:"追踪创业者动态", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-    { name:"媒体转录", description:"媒体转录", detail:"媒体转录", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-    { name:"社交媒体情报", description:"社交媒体情报", detail:"社交媒体情报", category:"社媒运营", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-    { name:"视频创作", description:"视频创作", detail:"视频创作", category:"社媒运营", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-    { name:"浏览器自动化", description:"浏览器自动化", detail:"浏览器自动化", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/43-Agent-skills" },
-    { name:"qiaomu-markdown-proxy", description:"URL → Markdown", detail:"URL → Markdown", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/qiaomu-markdown-proxy" },
-    { name:"skill-vetter", description:"Security-first vetting for Claude Code skills", detail:"Skill安全审核工具，审计权限、提示注入、供应链风险等", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/Skill-Vetter" },
-    { name:"skill-creator", description:"Anthropic 官方构建工具", detail:"Anthropic 官方构建工具", category:"效率工具", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/skill-creator" },
-    { name:"ian-xiaohei-illustrations", description:"「小黑」手绘怪诞风中文文章配图", detail:"理解文章认知锚点后，把判断/流程/隐喻画成 16:9 手绘正文配图，输出 shot list + PNG；纯白底、小黑 IP，作者 Ian（MIT）", category:"内容创作", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/ian-xiaohei-illustrations" },
-    { name:"BP初筛", description:"Pitch Deck 初筛", detail:"BP 初筛，输出一页纸结论、风险与追问；收入/估值/市场等未验证数据标「待验证」（外部VC）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/futurex-vc-skills" },
-    { name:"Claim核验", description:"公司关键 Claim 核验", detail:"抽取并核验公司关键 Claim，区分已验证事实/公司自述/第三方报道/待验证（外部VC）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/futurex-vc-skills" },
-    { name:"风险Memo", description:"项目风险识别与缓释", detail:"系统化识别项目风险和缓释动作（外部VC）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/futurex-vc-skills" },
-    { name:"赛道图谱", description:"赛道 Market Map", detail:"构建赛道图谱、价值链和竞品分层（外部VC）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/futurex-vc-skills" },
-    { name:"公司One-Pager", description:"公司 One-Pager", detail:"生成投资团队可快速阅读的公司 One-Pager（外部VC）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/futurex-vc-skills" },
-    { name:"技术尽调", description:"技术型项目技术 DD", detail:"面向技术型项目的技术尽职调查（外部VC）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/futurex-vc-skills" },
-    { name:"投委会Memo", description:"IC Memo 生成", detail:"将研究材料组织为投委会 memo（外部VC）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/futurex-vc-skills" },
-    { name:"用户反馈分析", description:"PMF 信号提取", detail:"从用户反馈中提取 PMF 信号（外部VC）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/futurex-vc-skills" },
-    { name:"论文投资分析", description:"论文/白皮书投资含义", detail:"拆解论文或技术白皮书的投资含义（外部VC）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/futurex-vc-skills" },
-    { name:"专利分析", description:"专利壁垒与风险", detail:"分析专利保护范围、壁垒和风险（外部VC）", category:"投研", source:"curated", url:"https://github.com/FutureX-Skills/FutureX-Skills/tree/main/外部精选Skills/futurex-vc-skills" }
-];
+        const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+        })[char]);
 
-        let currentFilter = 'all', currentSearch = '';
+        const getSearchText = skill => [
+            skill.name, skill.summary, skill.detail, skill.category, skill.author,
+            ...(skill.tags || []), ...(skill.inputs || []), ...(skill.outputs || [])
+        ].filter(Boolean).join(' ').toLowerCase();
 
-        // Update stats dynamically
-        (function() {
-            const builtinCount = skills.filter(s => s.source === 'builtin').length;
-            const curatedCount = skills.filter(s => s.source === 'curated').length;
-            document.getElementById('statBuiltin').setAttribute('data-target', builtinCount);
-            document.getElementById('statCurated').setAttribute('data-target', curatedCount);
-            document.getElementById('statTotal').setAttribute('data-target', builtinCount + curatedCount);
-        })();
+        const getInstallCommand = skill => skill.installCommand || '请前往 GitHub 查看安装说明';
+
+        const getFilteredSkills = () => {
+            const query = currentSearch.trim().toLowerCase();
+            return skills.filter(skill =>
+                (currentFilter === 'all' || skill.category === currentFilter) &&
+                (!query || getSearchText(skill).includes(query))
+            );
+        };
+
+        function syncUrl(skillId = '', { replace = true } = {}) {
+            const params = new URLSearchParams();
+            if (currentSearch.trim()) params.set('q', currentSearch.trim());
+            if (currentFilter !== 'all') params.set('category', currentFilter);
+            if (skillId) params.set('skill', skillId);
+            const query = params.toString();
+            const url = query ? location.pathname + '?' + query : location.pathname;
+            history[replace ? 'replaceState' : 'pushState'](null, '', url);
+        }
+
+        function readUrlState() {
+            const params = new URLSearchParams(location.search);
+            currentSearch = params.get('q') || '';
+            currentFilter = params.get('category') || 'all';
+            currentSkillId = params.get('skill') || '';
+            if (!['all', '投研', '内容创作', '社媒运营', '效率工具'].includes(currentFilter)) currentFilter = 'all';
+            document.getElementById('searchInput').value = currentSearch;
+            document.getElementById('heroSearchInput').value = currentSearch;
+        }
+
+        function updateStats(filtered = skills) {
+            const builtinCount = skills.filter(skill => skill.source === 'builtin').length;
+            const curatedCount = skills.filter(skill => skill.source === 'curated').length;
+            const visibleBuiltin = filtered.filter(skill => skill.source === 'builtin').length;
+            const visibleCurated = filtered.filter(skill => skill.source === 'curated').length;
+            document.getElementById('statTotal').textContent = skills.length;
+            document.getElementById('statBuiltin').textContent = builtinCount;
+            document.getElementById('statCurated').textContent = curatedCount;
+            document.getElementById('builtinCount').textContent = currentSearch || currentFilter !== 'all' ? String(visibleBuiltin) + '/' + builtinCount : builtinCount;
+            document.getElementById('curatedCount').textContent = currentSearch || currentFilter !== 'all' ? String(visibleCurated) + '/' + curatedCount : curatedCount;
+        }
 
         function renderSkills() {
-            const gb = document.getElementById('gridBuiltin');
-            const gc = document.getElementById('gridCurated');
-            gb.innerHTML = ''; gc.innerHTML = '';
+            const builtinGrid = document.getElementById('gridBuiltin');
+            const curatedGrid = document.getElementById('gridCurated');
+            const filtered = getFilteredSkills();
+            builtinGrid.replaceChildren();
+            curatedGrid.replaceChildren();
 
-            const filtered = skills.filter(s =>
-                (currentFilter === 'all' || s.category === currentFilter) &&
-                (currentSearch === '' ||
-                    s.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
-                    s.description.toLowerCase().includes(currentSearch.toLowerCase()))
-            );
+            filtered.filter(skill => skill.source === 'builtin').forEach((skill, index) => {
+                builtinGrid.appendChild(createCard(skill, index));
+            });
+            filtered.filter(skill => skill.source === 'curated').forEach((skill, index) => {
+                curatedGrid.appendChild(createCard(skill, index));
+            });
 
-            filtered.filter(s => s.source === 'builtin').forEach((s, i) => gb.appendChild(createCard(s, i)));
-            filtered.filter(s => s.source === 'curated').forEach((s, i) => gc.appendChild(createCard(s, i)));
-
+            document.getElementById('resultStatus').textContent = filtered.length
+                ? '找到 ' + filtered.length + ' 个 Skills'
+                : '没有找到匹配的 Skill';
             document.getElementById('emptyState').classList.toggle('visible', filtered.length === 0);
+            document.getElementById('emptyStateText').textContent = currentSearch || currentFilter !== 'all'
+                ? '换一个关键词或清除筛选试试'
+                : '暂时没有可展示的 Skill';
+            document.querySelectorAll('.filter-pill').forEach(pill => {
+                const active = pill.dataset.filter === currentFilter;
+                pill.classList.toggle('active', active);
+                pill.setAttribute('aria-pressed', String(active));
+            });
+            updateStats(filtered);
+            const modalOpen = document.getElementById('modalOverlay').classList.contains('visible');
+            syncUrl(modalOpen ? currentSkillId : '');
         }
 
         function createCard(skill, index) {
-            const card = document.createElement('div');
+            const card = document.createElement('article');
+            const icon = categoryIcons[skill.category] || categoryIcons['效率工具'];
             card.className = 'skill-card';
-            card.style.animationDelay = `${index * 0.04}s`;
-
-            const isTeam = skill.source === 'builtin';
-            const icon = icons[skill.name] || '⚡';
-
-            card.innerHTML = `
-                <div class="shine"></div>
-                <div class="card-inner">
-                    <div class="card-mono">${icon} ${isTeam ? 'TEAM' : 'EXT'}</div>
-                    <div class="card-name">${skill.name}</div>
-                    <div class="card-desc">${skill.description}</div>
-                    ${skill.detail ? `<div class="card-detail">${skill.detail}</div>` : ''}
-                    <div class="card-footer">
-                        <span class="card-tag ${isTeam ? 'tag-team' : 'tag-ext'}">${skill.category}</span>
-                        ${isTeam && skill.author ? `<span class="card-author"><span class="card-author-dot">●</span>${skill.author}</span>` : ''}
-                        <span class="card-arrow">→</span>
-                    </div>
-                </div>
-            `;
-
-            card.addEventListener('mousemove', (e) => {
+            card.style.animationDelay = String(Math.min(index, 12) * 0.04) + 's';
+            card.innerHTML =
+                '<div class="shine"></div>' +
+                '<div class="card-inner">' +
+                    '<div class="card-mono">' + icon + '<span>' + (skill.source === 'builtin' ? 'TEAM' : 'EXT') + '</span></div>' +
+                    '<div class="card-name">' + escapeHtml(skill.name) + '</div>' +
+                    '<div class="card-desc">' + escapeHtml(skill.summary) + '</div>' +
+                    (skill.detail ? '<div class="card-detail">' + escapeHtml(skill.detail) + '</div>' : '') +
+                    '<div class="card-meta"><span>输出：' + escapeHtml((skill.outputs || []).join('、') || '见 Skill 说明') + '</span></div>' +
+                    '<div class="card-footer">' +
+                        '<span class="card-tag ' + (skill.source === 'builtin' ? 'tag-team' : 'tag-ext') + '">' + escapeHtml(skill.category) + '</span>' +
+                        (skill.author ? '<span class="card-author"><span class="card-author-dot">●</span>' + escapeHtml(skill.author) + '</span>' : '') +
+                        '<button class="card-open" type="button">查看详情 <span aria-hidden="true">→</span></button>' +
+                    '</div>' +
+                '</div>';
+            const openButton = card.querySelector('.card-open');
+            const open = () => openModal(skill, openButton);
+            card.addEventListener('click', event => {
+                if (!event.target.closest('button')) open();
+            });
+            openButton.setAttribute('aria-label', '查看 ' + skill.name + ' 详情');
+            openButton.addEventListener('click', open);
+            card.addEventListener('mousemove', event => {
                 const rect = card.getBoundingClientRect();
                 const shine = card.querySelector('.shine');
-                shine.style.left = `${e.clientX - rect.left}px`;
-                shine.style.top = `${e.clientY - rect.top}px`;
+                shine.style.left = String(event.clientX - rect.left) + 'px';
+                shine.style.top = String(event.clientY - rect.top) + 'px';
             });
-
-            card.addEventListener('click', () => openModal(skill));
             return card;
         }
 
-        function openModal(skill) {
-            const isTeam = skill.source === 'builtin';
+        function openModal(skill, trigger, { syncUrlState = true } = {}) {
+            lastFocusedElement = trigger || document.activeElement;
+            currentSkillId = skill.id;
             document.getElementById('modalTag').textContent = skill.category;
             document.getElementById('modalTitle').textContent = skill.name;
             document.getElementById('modalCategory').textContent =
-                skill.category + ' · ' + (isTeam ? '天际自建' : '外部精选');
-            document.getElementById('modalDesc').innerHTML = skill.detail ? `<p style="margin-bottom:12px;font-weight:600;color:var(--ink);">${skill.description}</p><p>${skill.detail}</p>` : skill.description;
-
+                skill.category + ' · ' + (skill.source === 'builtin' ? '天际自建' : '外部精选');
+            document.getElementById('modalDescription').textContent = skill.summary;
+            document.getElementById('modalDetail').textContent = skill.detail || '暂无补充说明';
+            document.getElementById('modalMeta').innerHTML =
+                '<div><strong>输入：</strong>' + escapeHtml((skill.inputs || []).join('、') || '按任务提供相关材料') + '</div>' +
+                '<div><strong>输出：</strong>' + escapeHtml((skill.outputs || []).join('、') || '按 Skill 说明生成结果') + '</div>' +
+                '<div><strong>维护：</strong>' + escapeHtml(skill.updatedAt ? '更新于 ' + skill.updatedAt : '当前目录已收录') + '</div>';
             const authorEl = document.getElementById('modalAuthor');
-            if (isTeam && skill.author) {
-                authorEl.textContent = '创建人：' + skill.author;
-                authorEl.style.display = 'block';
-            } else {
-                authorEl.style.display = 'none';
-            }
-
+            authorEl.textContent = skill.author ? '创建人：' + skill.author : '社区精选';
+            authorEl.style.display = 'inline-block';
+            document.getElementById('installCommand').textContent = getInstallCommand(skill);
             document.getElementById('modalGo').href = skill.url;
+            document.getElementById('feedbackForm').style.display = 'none';
+            document.getElementById('modalActions').style.display = 'flex';
+            document.getElementById('feedbackResult').style.display = 'none';
             document.getElementById('modalOverlay').classList.add('visible');
+            document.getElementById('modalOverlay').setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+            if (syncUrlState) syncUrl(skill.id, { replace: false });
+            const focusModal = () => document.getElementById('modalClose').focus();
+            focusModal();
+            window.setTimeout(focusModal, 0);
+            window.setTimeout(focusModal, 250);
         }
 
-        function closeModal() {
+        function closeModal({ updateUrl = true } = {}) {
             document.getElementById('modalOverlay').classList.remove('visible');
+            document.getElementById('modalOverlay').setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
             document.getElementById('feedbackForm').style.display = 'none';
             document.getElementById('modalActions').style.display = 'flex';
             document.getElementById('feedbackText').value = '';
             document.getElementById('feedbackResult').style.display = 'none';
+            if (updateUrl) syncUrl('', { replace: false });
+            if (lastFocusedElement && document.contains(lastFocusedElement)) lastFocusedElement.focus();
+            lastFocusedElement = null;
+            currentSkillId = '';
         }
-
-        let currentSkillName = '';
 
         function openFeedbackForm() {
-            currentSkillName = document.getElementById('modalTitle').textContent;
             document.getElementById('modalActions').style.display = 'none';
             document.getElementById('feedbackForm').style.display = 'block';
+            const focusFeedback = () => document.getElementById('feedbackText').focus();
+            focusFeedback();
+            window.setTimeout(focusFeedback, 0);
         }
 
-        function submitFeedback() {
+        function showFeedbackResult(message, type) {
+            const element = document.getElementById('feedbackResult');
+            element.textContent = message;
+            element.className = 'feedback-result ' + type;
+            element.style.display = 'block';
+        }
+
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.dataset.type = type;
+            toast.classList.add('visible');
+            window.clearTimeout(showToast.timer);
+            showToast.timer = window.setTimeout(() => toast.classList.remove('visible'), 4000);
+        }
+
+        async function copyInstallCommand() {
+            const skill = skills.find(item => item.id === currentSkillId);
+            if (!skill || !skill.installCommand) return;
+            const command = getInstallCommand(skill);
+            let copied = false;
+            try {
+                await navigator.clipboard.writeText(command);
+                copied = true;
+            } catch {
+                try {
+                    const fallback = document.createElement('textarea');
+                    fallback.value = command;
+                    fallback.style.position = 'fixed';
+                    fallback.style.opacity = '0';
+                    document.body.appendChild(fallback);
+                    fallback.select();
+                    copied = document.execCommand('copy');
+                    fallback.remove();
+                } catch {
+                    copied = false;
+                }
+            }
+            showToast(copied ? '安装命令已复制' : '复制失败，请手动选择命令', copied ? 'success' : 'error');
+        }
+
+        async function submitFeedback() {
             const feedback = document.getElementById('feedbackText').value.trim();
             if (!feedback) {
                 showFeedbackResult('请输入反馈内容', 'error');
                 return;
             }
-
-            // Close modal immediately, send in background
-            closeModal();
-
-            // Show brief success toast
-            const toast = document.createElement('div');
-            toast.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--primary);color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;z-index:9999;';
-            toast.textContent = '✓ 反馈已发送';
-            document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 1000);
-
-            fetch('/api/feedback', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    skillName: currentSkillName,
-                    author: (() => {
-                        const s = skills.find(x => x.name === currentSkillName);
-                        return s && s.author || '';
-                    })(),
-                    feedback: feedback
-                })
-            }).catch(() => {}); // Silent fail
+            const button = document.getElementById('feedbackSubmit');
+            button.disabled = true;
+            button.setAttribute('aria-busy', 'true');
+            button.textContent = '发送中…';
+            const skill = skills.find(item => item.id === currentSkillId);
+            try {
+                const response = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        skillName: skill?.name || document.getElementById('modalTitle').textContent,
+                        author: skill?.author || '',
+                        feedback
+                    })
+                });
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || result.success !== true) throw new Error('feedback request failed');
+                closeModal();
+                showToast('反馈已发送');
+            } catch {
+                showFeedbackResult('发送失败，请检查网络后重试', 'error');
+            } finally {
+                button.disabled = false;
+                button.removeAttribute('aria-busy');
+                button.textContent = '提交反馈';
+            }
         }
 
-        function showFeedbackResult(msg, type) {
-            const el = document.getElementById('feedbackResult');
-            el.textContent = msg;
-            el.className = 'feedback-result ' + type;
-            el.style.display = 'block';
+        async function loadCatalog() {
+            const response = await fetch('/skills.json', { cache: 'no-store' });
+            if (!response.ok) throw new Error('catalog request failed');
+            const payload = await response.json();
+            if (!Array.isArray(payload.skills)) throw new Error('invalid catalog');
+            skills = payload.skills;
         }
 
-        /* ── Scroll reveal ── */
-        (function() {
-            const obs = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-                });
-            }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-            document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-        })();
+        function focusHeroSearch() {
+            document.getElementById('heroSearchInput').focus();
+            document.getElementById('heroSearchInput').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
 
-        /* ── Counter animation ── */
-        (function() {
-            const obs = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    if (!e.isIntersecting) return;
-                    const el = e.target;
-                    const target = parseInt(el.getAttribute('data-target'), 10);
-                    let cur = 0;
-                    const inc = () => { cur++; el.textContent = cur; if (cur < target) requestAnimationFrame(inc); };
-                    requestAnimationFrame(inc);
-                    obs.unobserve(el);
-                });
-            }, { threshold: 0.5 });
-            document.querySelectorAll('[data-target]').forEach(el => obs.observe(el));
-        })();
-
-        /* ── Init ── */
-        document.addEventListener('DOMContentLoaded', () => {
+        function applySearch(value) {
+            currentSearch = value;
+            document.getElementById('searchInput').value = value;
+            document.getElementById('heroSearchInput').value = value;
             renderSkills();
+        }
 
-            document.getElementById('searchInput').addEventListener('input', e => {
-                currentSearch = e.target.value;
-                renderSkills();
+        document.addEventListener('DOMContentLoaded', async () => {
+            readUrlState();
+            document.getElementById('heroSearchButton').addEventListener('click', focusHeroSearch);
+            document.getElementById('heroSearchForm').addEventListener('submit', event => {
+                event.preventDefault();
+                applySearch(document.getElementById('heroSearchInput').value);
+                document.getElementById('builtin').scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
-
+            document.getElementById('searchInput').addEventListener('input', event => applySearch(event.target.value));
             document.querySelectorAll('.filter-pill').forEach(pill => {
                 pill.addEventListener('click', () => {
-                    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-                    pill.classList.add('active');
                     currentFilter = pill.dataset.filter;
                     renderSkills();
-
-                    // Auto scroll to skills grid when filter changes
-                    const builtinSection = document.getElementById('builtin');
-                    if (builtinSection) {
-                        const navHeight = 60;
-                        const targetY = builtinSection.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
-                        window.scrollTo({ top: targetY, behavior: 'smooth' });
-                    }
+                    document.getElementById('builtin').scrollIntoView({ behavior: 'smooth', block: 'start' });
                 });
             });
-
-            // Nav links click effect
+            document.getElementById('clearFilters').addEventListener('click', () => {
+                currentFilter = 'all';
+                applySearch('');
+            });
             document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
+                link.addEventListener('click', () => {
+                    document.querySelectorAll('.nav-links a').forEach(item => item.classList.remove('active'));
+                    link.classList.add('active');
+                    document.getElementById('navToggle').setAttribute('aria-expanded', 'false');
+                    document.getElementById('navToggle').setAttribute('aria-label', '打开导航');
+                    document.getElementById('mainNav').classList.remove('open');
                 });
             });
-
+            document.getElementById('navToggle').addEventListener('click', () => {
+                const toggle = document.getElementById('navToggle');
+                const open = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!open));
+                toggle.setAttribute('aria-label', open ? '打开导航' : '关闭导航');
+                document.getElementById('mainNav').classList.toggle('open', !open);
+            });
             document.getElementById('modalClose').addEventListener('click', closeModal);
+            document.getElementById('modalCloseIcon').addEventListener('click', closeModal);
             document.getElementById('modalFeedback').addEventListener('click', openFeedbackForm);
             document.getElementById('feedbackCancel').addEventListener('click', () => {
                 document.getElementById('feedbackForm').style.display = 'none';
                 document.getElementById('modalActions').style.display = 'flex';
+                document.getElementById('modalClose').focus();
             });
             document.getElementById('feedbackSubmit').addEventListener('click', submitFeedback);
-            document.getElementById('modalOverlay').addEventListener('click', e => {
-                if (e.target.id === 'modalOverlay') closeModal();
+            document.getElementById('copyInstall').addEventListener('click', copyInstallCommand);
+            document.getElementById('modalOverlay').addEventListener('click', event => {
+                if (event.target.id === 'modalOverlay') closeModal();
             });
-            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape' && document.getElementById('modalOverlay').classList.contains('visible')) {
+                    closeModal();
+                    return;
+                }
+                if (event.key !== 'Tab' || !document.getElementById('modalOverlay').classList.contains('visible')) return;
+                const focusable = [...document.querySelectorAll('#modalOverlay button, #modalOverlay a, #modalOverlay textarea')].filter(item => !item.disabled && item.offsetParent !== null);
+                if (!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (event.shiftKey && document.activeElement === first) {
+                    event.preventDefault();
+                    last.focus();
+                } else if (!event.shiftKey && document.activeElement === last) {
+                    event.preventDefault();
+                    first.focus();
+                }
+            });
+            window.addEventListener('popstate', () => {
+                readUrlState();
+                const skillId = currentSkillId;
+                renderSkills();
+                const skill = skills.find(item => item.id === skillId);
+                if (skill) {
+                    syncUrl(skillId);
+                    openModal(skill, null, { syncUrlState: false });
+                }
+                else closeModal({ updateUrl: false });
+            });
+
+            try {
+                await loadCatalog();
+                const requestedSkillId = currentSkillId;
+                renderSkills();
+                const skill = skills.find(item => item.id === requestedSkillId);
+                if (skill) {
+                    syncUrl(requestedSkillId);
+                    openModal(skill, null, { syncUrlState: false });
+                }
+            } catch {
+                document.getElementById('resultStatus').textContent = '目录加载失败';
+                document.getElementById('emptyState').classList.add('visible');
+                document.getElementById('emptyStateText').textContent = '请刷新页面后重试';
+            }
         });
 
-        /* ── Multi-pet random crawl ── */
-        (function() {
-            const bar = document.querySelector('.stats-bar .container');
-            if (!bar) return;
-
-            const petConfigs = [
-                { id: 'pet-lobster', speed: 84, flipX: true  },
-                { id: 'pet-robot',   speed: 78, flipX: true  },
-                { id: 'pet-cat',     speed: 90, flipX: true  },
-                { id: 'pet-fish',    speed: 96, flipX: true  },
-            ];
-
-            function rand(min, max) { return Math.random() * (max - min) + min; }
-
-            const pets = petConfigs.map(cfg => {
-                const el = document.getElementById(cfg.id);
-                if (!el) return null;
-                const w = bar.clientWidth  || 500;
-                const h = bar.clientHeight || 80;
-                const x = rand(20, w - 50);
-                const y = rand(4, h - 36);
-                el.style.left = x + 'px';
-                el.style.top  = y + 'px';
-                return {
-                    el,
-                    speed: cfg.speed,
-                    flipX: cfg.flipX,
-                    x, y,
-                    tx: rand(20, w - 50),
-                    ty: rand(4,  h - 36),
-                    vx: 0, vy: 0,
-                    facingRight: true,
-                    pauseUntil: 0
-                };
-            }).filter(Boolean);
-
-            let lastTs = null;
-            function step(ts) {
-                if (!lastTs) lastTs = ts;
-                const dt = Math.min((ts - lastTs) / 1000, 0.05);
-                lastTs = ts;
-
-                const w = bar.clientWidth  || 500;
-                const h = bar.clientHeight || 80;
-
-                pets.forEach(p => {
-                    if (ts < p.pauseUntil) return;
-
-                    const dx = p.tx - p.x;
-                    const dy = p.ty - p.y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-
-                    if (dist < 6) {
-                        p.pauseUntil = ts + rand(300, 1400);
-                        p.tx = rand(10, w - 50);
-                        p.ty = rand(4,  h - 36);
-                        return;
-                    }
-
-                    const nx = dx / dist, ny = dy / dist;
-                    p.vx += nx * 240 * dt;
-                    p.vy += ny * 240 * dt;
-                    const spd = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
-                    if (spd > p.speed) { p.vx = p.vx / spd * p.speed; p.vy = p.vy / spd * p.speed; }
-                    p.vx *= 0.88; p.vy *= 0.88;
-                    p.x += p.vx * dt;
-                    p.y += p.vy * dt;
-
-                    // clamp inside bar
-                    p.x = Math.max(0, Math.min(w - 50, p.x));
-                    p.y = Math.max(0, Math.min(h - 36, p.y));
-
-                    if (p.flipX) {
-                        if (p.vx > 0.8 && !p.facingRight) {
-                            p.facingRight = true;
-                            p.el.style.transform = 'scaleX(1)';
-                        } else if (p.vx < -0.8 && p.facingRight) {
-                            p.facingRight = false;
-                            p.el.style.transform = 'scaleX(-1)';
-                        }
-                    }
-
-                    p.el.style.left = p.x + 'px';
-                    p.el.style.top  = p.y + 'px';
-                });
-
-                requestAnimationFrame(step);
-            }
-            requestAnimationFrame(step);
-        })();
     </script>
 </body>
 </html>
